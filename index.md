@@ -1,4 +1,4 @@
-## David Hestelow
+## Stuff About things
 
 You can use the [editor on GitHub](https://github.com/DJHStudent/DJHStudent.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
