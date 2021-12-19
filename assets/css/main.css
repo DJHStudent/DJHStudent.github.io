@@ -1306,9 +1306,9 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: url("images/overlay.png"), url("images/bg.jpg");
+		background-image: url("images/overla.jpg"), url("images/pacman.png");
 		background-repeat: repeat, no-repeat;
-		background-size: auto, 100% 100%;
+		background-size: auto, 100%;
 		background-attachment: fixed;
 		overflow-y: scroll;
 	}
@@ -1824,7 +1824,7 @@ input, select, textarea {
 				top: -2.75em;
 				font-size: 0.3em;
 				height: 2.25em;
-				line-height: 2.25em;
+				line-height: 1.1em;
 				left: 50%;
 				opacity: 0;
 				-moz-transition: opacity .25s ease-in-out;
@@ -1874,7 +1874,7 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper {
-		width: 45em;
+		width: 70em;
 		margin: 0 auto;
 		min-height: 100vh;
 		max-width: 100%;
@@ -1962,7 +1962,7 @@ input, select, textarea {
 			transition: opacity 0.25s ease-in-out;
 			margin-bottom: 0;
 			position: relative;
-			padding: 3.5em 2.5em 2.5em 2.5em;
+			padding: 1.5em 2.5em 2.5em 2.5em;
 			width: 100%;
 		}
 
@@ -2189,3 +2189,22 @@ input, select, textarea {
 			}
 
 		}
+
+#info-overview {
+	color: white;
+	border: #000;
+	font-weight: bolder;
+	border-radius: 0.1em;
+	text-align: center;
+	padding: 0.25em 1em 0.25em 1em;
+	font-size: 1em;
+	margin-top: 1em;
+}
+#logo{
+	margin-top: 1em;
+	text-align: left;
+}
+
+#Contact-Info{
+	text-align: center;
+}
