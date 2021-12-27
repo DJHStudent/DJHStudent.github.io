@@ -18,20 +18,16 @@
 			<div id="wrapper">
 				<!-- Nav -->
 					<nav id="nav">
-						<a href="#" class="icon solid fa-home"><span>About the  Home</span></a>
-						<a href="#contact" class="icon solid fa-envelope"><span>Contact Me/ Links</span></a>
-						<a href="#work" class="icon solid fa-water"><span>Island Survival</span></a>
-						<a href="#Pacman" class="icon solid fa-ghost"><span>Procedural Pacman</span></a>
-						<a href="#Raindrop" class="icon solid fa-water"><span>Extra Stuff</span></a>
-						<a href="#Pacman" class="icon solid fa-ghost"><span>Procedural Pacman</span></a>
-						<a href="#Pacman" class="icon solid fa-ghost"><span>Procedural Pacman</span></a>
+						<a href="#about" class="icon solid fa-home"><span>About Me</span></a>
+						<a href="#contact" class="icon solid fa-envelope"><span>Contact Me</span></a>
+						<a href="#island-survival" class="icon solid fa-water"><span>Island Survival</span></a>
+						<a href="#Raindrop" class="icon solid fa-water"><span>Raindrop</span></a>
 						<a href="#Pacman" class="icon solid fa-ghost"><span>Procedural Pacman</span></a>
 					</nav>
 				<!-- Main -->
 					<div id="main">
-
 						 <!-- Me -->
-							<article id="home" class="panel intro">
+							<article id="about" class="panel intro">
 								<header>
 									<h1>David Hestelow</h1>
 									<p>Experience in Gameplay Programming and AI</p>
@@ -42,13 +38,55 @@
 								</a>
 							</article>
 
+							<!-- Contact -->
+							<article id="contact" class="panel">
+								<a href="#about" style="float: left" class='linkbutton'>
+									<span class="arrow icon solid fa-chevron-left"></span>
+								</a>
+								<a href="#island-survival" style="float: right" class='linkbutton'>
+									<span class="arrow icon solid fa-chevron-right"></span>
+								</a>
+								<header>
+									<h2>Contact Me</h2>
+								</header>
+								<div id="Contact-Info">
+									<h3>GitHub</h3>
+									<h3>Social Media</h3>
+									<h3>Email: <a href="mailto:djhestelow@gmail.com">djhestelow@gmail.com</a></h3>
+								</div>
+							
+
+							<!--	<form action="#" method="post">
+									<div>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<input type="text" name="name" placeholder="Name" />
+											</div>
+											<div class="col-6 col-12-medium">
+												<input type="text" name="email" placeholder="Email" />
+											</div>
+											<div class="col-12">
+												<input type="text" name="subject" placeholder="Subject" />
+											</div>
+											<div class="col-12">
+												<textarea name="message" placeholder="Message" rows="6"></textarea>
+											</div>
+											<div class="col-12">
+												<input type="submit" value="Send Message" />
+											</div>
+										</div>
+									</div>
+								-->
+								</form>
+							</article>
+
 						<!-- Island Survival -->
-						<article id="work" class="panel">
-							<a href="#contact">
-								<span class="arrow icon solid fa-chevron-left"><span>Previous</span></span>
+						<article id="island-survival" class="panel">
+							<a href="#contact" style="float: left" class='linkbutton'>
+								<span class="arrow icon solid fa-chevron-left"></span>
 							</a>
-							<a href="#Pacman" style="float: right">
-								<span>Next<span class="arrow icon solid fa-chevron-right"></span></span>
+							<a href="#Pacman" style="float: right" class='linkbutton'>
+								<span class="arrow icon solid fa-chevron-right"></span>
 							</a>
 							<header>
 								<h2>Island Survival</h2>
@@ -58,23 +96,111 @@
 							<span id="info-overview" style="background-color: dodgerblue">Blueprints</span>
 							<span id="info-overview" style="background-color: firebrick">Multiplayer</span>
 							<span id="info-overview" style="background-color: firebrick">Procedural Terrain</span>
-							<span id="info-overview" style="background-color: forestgreen">Student Work</span>
-							<span id="info-overview" style="background-color: forestgreen">Group</span>
+							<span id="info-overview" style="background-color: forestgreen">Student Work(Group of 2)</span>
+							<div class="project-overview">
+								<iframe src="https://www.youtube.com/embed/7tUjPiNyuG8?rel=0" frameborder="0" title="Pacman showcase video"
+								allowfullscreen>
+								</iframe>
+								<span class="overview-info">
+									<p class="subheading">Some features to highlight:</p>
+									<ul>
+										<li>Procedural Terrain System</li>
+										<li>Island Generation</li>
+										<li>Multiple Biomes</li>
+										<li>Realistic Plant Spawning</li>
+										<li>LAN Multiplayer</li>
+									</ul>
+								</span>
+							</div>	
+							<p class="subheading">Project Overview</p>						
+							<p>	This second year project, developed largely between <b>August 2021 - October 2021(10 Weeks)</b> was undertaken 
+								to learn the fundamentals of game development. Tasked with recreating the entirety of the game Pac-Man with a 
+								distinctive style as well as creating a unique design innovation. Here I challenged myself by implementing an 
+								entire procedural maze system, which works around the constraints of the Pac-Man level design.</p>
+							<div class="row" style="margin-left: 20%; margin-right: 20%;">
+								<div class="col-6 col-6-medium col-12-small">
+									<p class="award-child">Project selected for and shown at the:</p>
+								</div>
+								<div class="col-6 col-6-medium col-12-small">
+									<a href="https://www.uts.edu.au/current-students/current-students-information-faculty-engineering-and-it/prototype-exhibition-projects-2021" 
+									target="_blank" class="award-child">
+										<img  src="images/2021 Showcase.PNG"  alt="Spring 2020 showcase banner"
+											width="100%" height="90%"/>
+									</a>
+								</div>
+							</div>
+							<p class="subheading">Procedural Maze Generation</p>
+							<p>Steps:</p>
+							<ol>
+								<li>Generates maze border</li>
+								<li>Spawns in centre piece and teleports</li>
+								<li>Uses a <span id="info-overview" style="background-color: firebrick">recursive backtracking</span> 
+									method to generate the maze paths</li>
+								This was a particularly challenging system to implement as all inside walls needed to be at 
+								least 2-thick requiring a number of extra conditions to be determined and checked against. 
+								<li>Spawn in correct map tiles with appropriate orientation</li>
+							</ol>	
+							<p style="font-weight: bold; margin-bottom: 0; text-align: center;">See how the Maze Generator Changed over Development</p>
+							<div style="text-align: center; margin: 0 auto;" class="row">
+								<div class="col-3 col-6-medium col-12-small">
+									<img src="images\Maze\maze1.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+								</div>
+								<div class="col-3 col-6-medium col-12-small">
+									<img src="images\Maze\maze2.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+								</div>
+								<div class="col-3 col-6-medium col-12-small">
+									<img src="images\Maze\maze4.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+								</div>
+								<div class="col-3 col-6-medium col-12-small">
+									<img src="images\Maze\maze5.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+								</div>
+							</div>
+
+
+							<p class="subheading">Sheep AI</p>
+							<div style="text-align: center; margin: 0 auto;" class="row">
+								<span class="col-3 col-6-medium col-12-small">
+									<img src="gifs/BlueSheep.gif" alt="Blue Sheep" style="align-items: center;"/>
+									<p>Moves Away from Player</p>
+								</span>
+								<span class="col-3 col-6-medium col-12-small">
+									<img src="gifs/OrangeSheep.gif" alt="Orange Sheep"/>
+									<p>Moves Towards Player</p>
+								</span>
+								<span class="col-3 col-6-medium col-12-small">
+									<img src="gifs/PinkSheep.gif" alt="Pink Sheep"/>
+									<p>Moves in Random Directions</p>
+								</span>
+								<span class="col-3 col-6-medium col-12-small">
+									<img src="gifs/RedSheep.gif" alt="Red Sheep"/>
+									<p>Follows Map Border in Clockwise Direction</p>
+								</span>
+							</div>
 							<p>
-								Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit.
-								Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-								luctus elit eget interdum.
+								One notable challenge here was the 4th Sheep as the waypoint system used had to be easily 
+								implementable within the maze generation system. This was solved by making each green tile 
+								act as a waypoint with the sheep mealy finding and navigating between each in turn, in a clockwise direction.
+								Accurate navigation was also a substantial challenge, especially on a large map so an efficient 
+								<span id="info-overview" style="background-color: firebrick">A* pathfinding</span> system was implemented to give accurate results.
+								This was achieved by making the green border tiles themselves act as the waypoint system, 
+								with them individually storing the neighbours tile location, within a clockwise direction.
 							</p>
-							</article>
+							
+							<div style="text-align: center;">
+								<a class="linkbuttontext" href="https://jokermain.itch.io/island-survival"
+								target="_blank">Download and Play from itch.io</a>
+								<a class="linkbuttontext" href="https://github.com/DJHStudent/IslandSurvival"
+								target="_blank">View Source Code on GitHub</a>
+							</div>
 						</article>
 
 						<!-- Pacman -->
 						<article id="Pacman" class="panel">
-							<a href="#work">
-								<span class="arrow icon solid fa-chevron-left"><span>Previous</span></span>
+							<a href="#work" style="float: left" class='linkbutton'>
+								<span class="arrow icon solid fa-chevron-left"></span>
 							</a>
-							<a href="#Raindrop" style="float: right">
-								<span >Next<span class="arrow icon solid fa-chevron-right"></span></span>
+							<a href="#Raindrop" style="float: right" class='linkbutton'>
+								<span class="arrow icon solid fa-chevron-right"></span>
 							</a>
 							<header>
 								<h2>Large Scale Procedural Pacman</h2>
@@ -83,16 +209,104 @@
 							<span id="info-overview" style="background-color: dodgerblue">C#</span>
 							<span id="info-overview" style="background-color: firebrick">Gameplay</span>
 							<span id="info-overview" style="background-color: firebrick">AI</span>
-							<span id="info-overview" style="background-color: forestgreen">Student Work</span>
-							<span id="info-overview" style="background-color: forestgreen">Individual</span>
+							<span id="info-overview" style="background-color: forestgreen">Student Work(Individual)</span>
+							<div class="project-overview">
+								<iframe src="https://www.youtube.com/embed/7tUjPiNyuG8?rel=0" frameborder="0" title="Pacman showcase video"
+								allowfullscreen>
+								</iframe>
+								<span class="overview-info">
+									<p class="subheading">Some features to highlight:</p>
+									<ul>
+										<li>Procedural Maze System using Recursive Backtracking</li>
+										<li>4 Types of Sheep AI</li>
+										<li>Character / AI movement via tweening</li>
+										<li>Saving / Loading using PlayerPrefs</li>
+										<li>Minimap system</li>
+									</ul>
+								</span>
+							</div>	
+							<p class="subheading">Project Overview</p>						
+							<p>	This first year project, developed largely between <b>August 2020 - October 2020(10 Weeks)</b> was undertaken 
+								to learn the fundamentals of game development. Tasked with recreating the entirety of the game Pac-Man with a 
+								distinctive style as well as creating a unique design innovation. Here I challenged myself by implementing an 
+								entire procedural maze system, which works around the constraints of the Pac-Man level design.</p>
+							<div class="row" style="margin-left: 20%; margin-right: 20%;">
+								<div class="col-6 col-6-medium col-12-small">
+									<p class="award-child">Project selected for and shown at the:</p>
+								</div>
+								<div class="col-6 col-6-medium col-12-small">
+									<a href="https://showcase.gamesstudio.org/spring-2020/" target="_blank" class="award-child">
+										<img  src="images/2020 Showcase.PNG"  alt="Spring 2020 showcase banner"
+											width="100%" height="90%"/>
+									</a>
+								</div>
+							</div>
+							<p class="subheading">Procedural Maze Generation</p>
+							<p>Steps:</p>
+							<ol>
+								<li>Generates maze border</li>
+								<li>Spawns in centre piece and teleports</li>
+								<li>Uses a <span id="info-overview" style="background-color: firebrick">recursive backtracking</span> 
+									method to generate the maze paths</li>
+								This was a particularly challenging system to implement as all inside walls needed to be at 
+								least 2-thick requiring a number of extra conditions to be determined and checked against. 
+								<li>Spawn in correct map tiles with appropriate orientation</li>
+							</ol>	
+							<p style="font-weight: bold; margin-bottom: 0; text-align: center;">See how the Maze Generator Changed over Development</p>
+							<div style="text-align: center; margin: 0 auto;" class="row">
+								<div class="col-3 col-6-medium col-12-small">
+									<img src="images\Maze\maze1.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+								</div>
+								<div class="col-3 col-6-medium col-12-small">
+									<img src="images\Maze\maze2.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+								</div>
+								<div class="col-3 col-6-medium col-12-small">
+									<img src="images\Maze\maze4.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+								</div>
+								<div class="col-3 col-6-medium col-12-small">
+									<img src="images\Maze\maze5.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+								</div>
+							</div>
+
+
+							<p class="subheading">Sheep AI</p>
+							<div style="text-align: center; margin: 0 auto;" class="row">
+								<span class="col-3 col-6-medium col-12-small">
+									<img src="gifs/BlueSheep.gif" alt="Blue Sheep" style="align-items: center;"/>
+									<p>Moves Away from Player</p>
+								</span>
+								<span class="col-3 col-6-medium col-12-small">
+									<img src="gifs/OrangeSheep.gif" alt="Orange Sheep"/>
+									<p>Moves Towards Player</p>
+								</span>
+								<span class="col-3 col-6-medium col-12-small">
+									<img src="gifs/PinkSheep.gif" alt="Pink Sheep"/>
+									<p>Moves in Random Directions</p>
+								</span>
+								<span class="col-3 col-6-medium col-12-small">
+									<img src="gifs/RedSheep.gif" alt="Red Sheep"/>
+									<p>Follows Map Border in Clockwise Direction</p>
+								</span>
+							</div>
 							<p>
-								Pacman game made in order to learn the fundamentals of the Unity game engine. Using a GRID SYSTEM 
-								and tweening in order to actually move the characters.
+								One notable challenge here was the 4th Sheep as the waypoint system used had to be easily 
+								implementable within the maze generation system. This was solved by making each green tile 
+								act as a waypoint with the sheep mealy finding and navigating between each in turn, in a clockwise direction.
+								Accurate navigation was also a substantial challenge, especially on a large map so an efficient 
+								<span id="info-overview" style="background-color: firebrick">A* pathfinding</span> system was implemented to give accurate results.
+								This was achieved by making the green border tiles themselves act as the waypoint system, 
+								with them individually storing the neighbours tile location, within a clockwise direction.
 							</p>
-	
+							
+							<div style="text-align: center;">
+								<a class="linkbuttontext" href="https://davidh18.itch.io/large-scale-procedural-pacman"
+								target="_blank">Play in Browser on itch.io</a>
+								<a class="linkbuttontext" href="https://github.com/DJHStudent/PacMan_Game"
+								target="_blank">View Source Code on GitHub</a>
+							</div>
 						</article>
 
-						<!-- Pacman -->
+						<!-- raindrop -->
 						<article id="Raindrop" class="panel">
 							<header>
 								<h2>Large Scale Procedural Pacman</h2>
@@ -102,12 +316,50 @@
 							<span id="info-overview" style="background-color: dodgerblue">Blueprints</span>
 							<span id="info-overview" style="background-color: firebrick">Multiplayer</span>
 							<span id="info-overview" style="background-color: firebrick">Procedural Terrain</span>
+							<span id="info-overview" style="background-color: forestgreen">Student Work(Group)</span>
+
 							<p>
 								Pacman game made in order to learn the fundamentals of the Unity game engine. Using a GRID SYSTEM 
 								and tweening in order to actually move the characters.
 							</p>
 							<section>
 								<div class="row">
+									<div class="col-6 col-6-medium col-12-small">
+										<a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
+									</div>
+									<div class="col-6 col-6-medium col-12-small">
+										<a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
+									</div>
+									<div class="col-5 col-6-medium col-12-small">
+										<a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
+									</div>
+									<div class="col-5 col-6-medium col-12-small">
+										<a href="#" class="image fit"><img src="images/pic04.jpg" alt=""></a>
+									</div>
+									<div class="col-5 col-6-medium col-12-small">
+										<a href="#" class="image fit"><img src="images/pic05.jpg" alt=""></a>
+									</div>
+									<div class="col-5 col-6-medium col-12-small">
+										<a href="#" class="image fit"><img src="images/pic06.jpg" alt=""></a>
+									</div>
+									<div class="col-5 col-6-medium col-12-small">
+										<a href="#" class="image fit"><img src="images/pic07.jpg" alt=""></a>
+									</div>
+									<div class="col-5 col-6-medium col-12-small">
+										<a href="#" class="image fit"><img src="images/pic08.jpg" alt=""></a>
+									</div>
+									<div class="col-5 col-6-medium col-12-small">
+										<a href="#" class="image fit"><img src="images/pic09.jpg" alt=""></a>
+									</div>
+									<div class="col-5 col-6-medium col-12-small">
+										<a href="#" class="image fit"><img src="images/pic10.jpg" alt=""></a>
+									</div>
+									<div class="col-5 col-6-medium col-12-small">
+										<a href="#" class="image fit"><img src="images/pic11.jpg" alt=""></a>
+									</div>
+									<div class="col-5 col-6-medium col-12-small">
+										<a href="#" class="image fit"><img src="images/pic12.jpg" alt=""></a>
+									</div>
 									<div class="col-4 col-6-medium col-12-small">
 										<a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
 									</div>
@@ -147,48 +399,6 @@
 								</div>
 							</section>
 						</article>
-
-						<!-- Contact -->
-							<article id="contact" class="panel">
-								<a href="#home">
-									<span class="arrow icon solid fa-chevron-left"><span>Previous</span></span>
-								</a>
-								<a href="#work" style="float: right">
-									<span >Next<span class="arrow icon solid fa-chevron-right"></span></span>
-								</a>
-								<header>
-									<h2>Contact Me</h2>
-								</header>
-								<div id="Contact-Info">
-									<h3>GitHub</h3>
-									<h3>Social Media</h3>
-									<h3>Email: <a href="mailto:djhestelow@gmail.com">djhestelow@gmail.com</a></h3>
-								</div>
-							
-
-							<!--	<form action="#" method="post">
-									<div>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<input type="text" name="name" placeholder="Name" />
-											</div>
-											<div class="col-6 col-12-medium">
-												<input type="text" name="email" placeholder="Email" />
-											</div>
-											<div class="col-12">
-												<input type="text" name="subject" placeholder="Subject" />
-											</div>
-											<div class="col-12">
-												<textarea name="message" placeholder="Message" rows="6"></textarea>
-											</div>
-											<div class="col-12">
-												<input type="submit" value="Send Message" />
-											</div>
-										</div>
-									</div>
-								-->
-								</form>
-							</article>
 
 					</div>
 

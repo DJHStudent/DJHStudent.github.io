@@ -151,6 +151,7 @@ input, select, textarea {
 
 		.row > .col-5 {
 			width: 41.66667%;
+			margin: auto;
 		}
 
 		.row > .off-5 {
@@ -1306,7 +1307,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: url("images/overla.jpg"), url("images/pacman.png");
+		background-image: url("images/overlay.png"), url("images/bg.jpg");
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 100%;
 		background-attachment: fixed;
@@ -1377,6 +1378,9 @@ input, select, textarea {
 	h2 {
 		font-size: 1.8em;
 		letter-spacing: -0.015em;
+		font-weight: bold;
+		border-bottom: solid medium lightgray;
+		padding-left: 3%;
 	}
 
 	h3, h4, h5, h6 {
@@ -1773,6 +1777,8 @@ input, select, textarea {
 		text-align: center;
 		height: 4.25em;
 		cursor: default;
+		margin-top: 2.5em;
+		float: left;
 	}
 
 		#nav a {
@@ -1882,7 +1888,7 @@ input, select, textarea {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
-		display: flex;
+		display: inline;
 		-moz-flex-direction: column;
 		-webkit-flex-direction: column;
 		-ms-flex-direction: column;
@@ -2207,4 +2213,61 @@ input, select, textarea {
 
 #Contact-Info{
 	text-align: center;
+}
+
+.linkbutton, .linkbuttontext{
+	background-color: #000;
+	color: white;
+	border: #000;
+	font-weight: bolder;
+	border-radius: 0.1em;
+	text-align: center;
+	padding: 1px 8px 1px 8px;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+.linkbutton:hover, .linkbutton:active, .linkbuttontext:hover, .linkbuttontext:active {
+	background-color: darkgray;
+}
+
+.linkbuttontext{
+	padding: 16px 16px 16px 16px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.subheading{
+	font-weight: bold;
+	color: #575757;
+	border-bottom: solid medium #575757;
+}
+
+iframe{
+	width: 98%;
+	height: 20em;
+	margin-top: 1%;
+}
+
+.project-overview{
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+}
+
+.overview-info{
+	margin-left: 5%;
+}
+
+.award-container{
+	display: flex;
+	align-content: flex-start;
+	flex-wrap: wrap;
+	margin: auto;
+	width: 50%;
+}
+
+.award-child{
+	font-weight: bolder;
+	text-align: center;
+	align-content: center;
 }
