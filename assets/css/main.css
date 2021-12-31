@@ -1307,7 +1307,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: url("images/overlay.png"), url("images/bg.jpg");
+		background-color: #1E2761;
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 100%;
 		background-attachment: fixed;
@@ -1328,7 +1328,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
-		color: #777777;
+		color: #363636;
 		font-size: 20pt;
 		line-height: 1.75em;
 	}
@@ -1379,8 +1379,12 @@ input, select, textarea {
 		font-size: 1.8em;
 		letter-spacing: -0.015em;
 		font-weight: bold;
-		border-bottom: solid medium lightgray;
-		padding-left: 3%;
+		padding-right: 3%;
+		background-color: #7e204a;
+		padding-top: 1%;
+		padding-bottom: 1%;
+		color: #E6E6E6;
+		text-align: center;
 	}
 
 	h3, h4, h5, h6 {
@@ -1753,6 +1757,7 @@ input, select, textarea {
 			text-transform: none !important;
 			font-family: 'Font Awesome 5 Free';
 			font-weight: 400;
+			color: #363636;
 		}
 
 		.icon.solid:before {
@@ -1777,7 +1782,7 @@ input, select, textarea {
 		text-align: center;
 		height: 4.25em;
 		cursor: default;
-		margin-top: 2.5em;
+		margin-top: 1em;
 		float: left;
 	}
 
@@ -1953,7 +1958,7 @@ input, select, textarea {
 		position: relative;
 		overflow: hidden;
 		width: 100%;
-		background: #ffffff;
+		background: #E6E6E6;
 		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
 		-moz-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
 		-webkit-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
@@ -2216,11 +2221,13 @@ input, select, textarea {
 }
 
 .linkbutton, .linkbuttontext{
-	background-color: #000;
-	color: white;
-	border: #000;
+	color: #363636;
+	background-color: #408EC6;
+	border: #408EC6;
 	font-weight: bolder;
-	border-radius: 0.1em;
+	border-radius: 0.2em;
+	border-style: solid;
+	border-width: 0.2em;
 	text-align: center;
 	padding: 1px 8px 1px 8px;
 	font-size: 1em;
@@ -2228,7 +2235,10 @@ input, select, textarea {
 }
 
 .linkbutton:hover, .linkbutton:active, .linkbuttontext:hover, .linkbuttontext:active {
-	background-color: darkgray;
+	border: #363636;
+	border-radius: 0.2em;
+	border-style: solid;
+	border-width: 0.2em;
 }
 
 .linkbuttontext{
