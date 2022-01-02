@@ -1379,7 +1379,9 @@ input, select, textarea {
 		font-size: 1.8em;
 		letter-spacing: -0.015em;
 		font-weight: bold;
-		padding-right: 3%;
+		margin-right: 0.5%;
+		margin-left: 0.5%;
+		
 		background-color: #363636;
 		padding-top: 1%;
 		padding-bottom: 1%;
@@ -2252,6 +2254,11 @@ input, select, textarea {
 	margin-right: 5%;
 }
 
+header .linkbuttontext{
+	padding: 22% 10% 22% 10%;
+	border-radius: 0;
+}
+
 .subheading{
 	font-weight: bold;
 	color: #575757;
@@ -2285,4 +2292,11 @@ iframe{
 	font-weight: bolder;
 	text-align: center;
 	align-content: center;
+}
+
+.page-title{
+	display: grid;
+	grid-template-columns: 3% 94% 3%;
+	text-align: center;
+	align-items: center;
 }
