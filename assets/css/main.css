@@ -1389,6 +1389,11 @@ input, select, textarea {
 		text-align: center;
 	}
 
+	.row h2{
+		margin-left: 0%;
+		margin-right: 0%;
+	}
+
 	h3, h4, h5, h6 {
 		font-size: 1.25em;
 		letter-spacing: -0.015em;
@@ -1565,9 +1570,13 @@ input, select, textarea {
 			width: 100%;
 		}
 
-		.image.fit {
+		.image.fit{
 			display: block;
 			width: 100%;
+			border: #408EC6;
+			border-style: solid;
+			border-width: 0.2em;
+			border-radius: 0.2em;		
 		}
 
 		.image.featured {
@@ -2213,7 +2222,8 @@ input, select, textarea {
 	text-align: center;
 	padding: 0.25em 1em 0.25em 1em;
 	font-size: 1em;
-	margin-top: 1em;
+	margin-top: 0.25em;
+	display: inline-block;
 }
 #logo{
 	margin-top: 1em;
@@ -2233,15 +2243,17 @@ input, select, textarea {
 	border-width: 0.2em;
 	text-align: center;
 	padding: 1px 8px 1px 8px;
+	margin-top: 5px;
 	font-size: 1em;
 	text-decoration: none;
+	display: inline-block;
 }
 
 .linkbutton, .linkbuttontext{
 	border-radius: 0.2em;
 }
 
-.linkbutton:hover, .linkbutton:active, .linkbuttontext:hover, .linkbuttontext:active{
+.linkbutton:hover, .linkbutton:active, .linkbuttontext:hover, .linkbuttontext:active, .image.fit:hover{
 	border: #363636;
 	border-radius: 0.2em;
 	border-style: solid;
