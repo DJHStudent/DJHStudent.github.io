@@ -180,11 +180,12 @@
 								allowfullscreen>
 								</iframe>
 								<span class="overview-info">
-									<p class="subheading">What I Worked On</p>
+									<p class="subheading">What I implemented</p>
 									<ul>
 										<li>Procedural Island Generation</li>
 										<li>Biomes Generation</li>
 										<li>Plant/Structure Spawning</li>
+										<li>Fuel pickup system</li>
 										<li>LAN Multiplayer</li>
 									</ul>
 								</span>
@@ -192,8 +193,10 @@
 							<p class="subheading">Project Overview</p>						
 							<p>Created as a second year project, where any AI or PCG system could be implemented, this tech demo 
 								has players collect fuel for their boat and evade zombies on some randomly generated islands. 
-								The highly customisable terrain system was implemented with the idea of its future use within 
-								many other projects so that their development times can be significantly reduced. The added challenge of 
+								The terrain system was implemented with the idea of its future use within 
+								many other projects so that their development times can be significantly reduced. Due to this all elements
+								have been designed to be highly customisable and easily removable based on the projects needs.							
+								The added challenge of 
 								island generation was implemented to allow for a more natural border to the game world.</p>
 							<div class="row" style="margin-left: 20%; margin-right: 20%;">
 								<div class="col-6 col-6-medium col-12-small">
@@ -208,76 +211,103 @@
 								</div>
 							</div>
 							<p class="subheading">Procedural Island Generation</p>
-							<p>Using Perlin noise as the base each Z position of the plane has been adjusted with its own height value</p>
-							<p>The terrain evolved along the following steps:</p>
+							<p>Using Perlin noise as the base each vertex of the plane has been adjusted with its own height value, having evolved 
+								along the following steps:
+							</p>
 							<section>
 								<div style="text-align: center;" class="row">
 									<div class="col-4 col-6-medium col-12-small">
-										<img class="image fit" src="images\islandsurvival\brownianmotion.png" alt="Fractal brownian motion terrain" 
-										width="100%" height="100%"/>
+										<a class="image fit"><img  src="images\islandsurvival\brownianmotion.png" alt="Fractal brownian motion terrain" 
+										width="100%" height="100%"/></a>
 										<p>Added Muliple layers of perlin noise</p>
 									</div>
 									<div class="col-4 col-6-medium col-12-small">
-										<img class="image fit" src="images/islandsurvival/domain warping.png" alt="Added on domain warping" 
+										<a class="image fit"><img src="images/islandsurvival/domain warping.png" alt="Added on domain warping" 
 										width="100%" height="100%"/>
+										</a>
 										<p>Gave the terrain more randomness and less repetitivness through domain warping</p>
 									</div>
 									<div class="col-4 col-6-medium col-12-small">
-										<img class="image fit" src="images\islandsurvival\rolling hills 3.png" alt="Added on rolling hills" 
+										<a class="image fit"><img src="images\islandsurvival\rolling hills 3.png" alt="Added on rolling hills" 
 										width="100%" height="100%"/>
+										</a>
 										<p>Made the terrain flatter by adding in more rolling hills</p>
 									</div>
 									<div class="col-4 col-6-medium col-12-small">
-										<img class="image fit" src="images\islandsurvival\rigid 4.png" alt="Added ridges" 
+										<a class="image fit"><img src="images\islandsurvival\rigid 4.png" alt="Added ridges" 
 										width="100%" height="100%"/>
+										</a>
 										<p>Allowed ridges to appear</p>
 									</div>
 									<div class="col-4 col-6-medium col-12-small">
-										<img class="image fit" src="images\islandsurvival\flatter areas 5.png" alt="Added flatter areas" 
+										<a class="image fit"><img src="images\islandsurvival\flatter areas 5.png" alt="Added flatter areas" 
 										width="100%" height="100%"/>
+										</a>
 										<p>Made terrain consist of flatter areas broken up by ridges and gullies</p>
 									</div>
 									<div class="col-4 col-6-medium col-12-small">
-										<img class="image fit" src="images\islandsurvival\terraces 6.png" alt="Added terraces" 
+										<a class="image fit"><img src="images\islandsurvival\terraces 6.png" alt="Added terraces" 
 										width="100%" height="100%"/>
+										</a>
 										<p>Added option for the terrain to be more stylized through terraces</p>
 									</div>
 									<div class="col-4 col-6-medium col-12-small">
-										<img class="image fit" src="images\islandsurvival\terraces 6.png" alt="Added terraces" 
+										<a class="image fit"><img src="images\islandsurvival\island.png" alt="Added terraces" 
 										width="100%" height="100%"/>
-										<p>Added islands by raising up the centre and drastically lowering the edges of the map</p>
+										</a>
+										<p>Added islands by raising up the centre and drastically lowering the edges of the previous map</p>
 									</div>
 								</div>
 							</section>
 
 							<p class="subheading">Biome Generation</p>
-							<div style="text-align: center; margin: 0 auto;" class="row">
-								<span class="col-3 col-6-medium col-12-small">
-									<img src="gifs/BlueSheep.gif" alt="Blue Sheep" style="align-items: center;"/>
-									<p>Moves Away from Player</p>
-								</span>
-								<span class="col-3 col-6-medium col-12-small">
-									<img src="gifs/OrangeSheep.gif" alt="Orange Sheep"/>
-									<p>Moves Towards Player</p>
-								</span>
-								<span class="col-3 col-6-medium col-12-small">
-									<img src="gifs/PinkSheep.gif" alt="Pink Sheep"/>
-									<p>Moves in Random Directions</p>
-								</span>
-								<span class="col-3 col-6-medium col-12-small">
-									<img src="gifs/RedSheep.gif" alt="Red Sheep"/>
-									<p>Follows Map Border in Clockwise Direction</p>
-								</span>
-							</div>
-							<p>
-								One notable challenge here was the 4th Sheep as the waypoint system used had to be easily 
-								implementable within the maze generation system. This was solved by making each green tile 
-								act as a waypoint with the sheep mealy finding and navigating between each in turn, in a clockwise direction.
-								Accurate navigation was also a substantial challenge, especially on a large map so an efficient 
-								<span id="info-overview" style="background-color: firebrick">A* pathfinding</span> system was implemented to give accurate results.
-								This was achieved by making the green border tiles themselves act as the waypoint system, 
-								with them individually storing the neighbours tile location, within a clockwise direction.
-							</p>
+							<p>Starting with the base generation above, the biome and plant spawning was overlayed on the terrain
+								and evolved along the following steps:</p>
+							<section>
+								<div style="text-align: center;" class="row">
+									<div class="col-4 col-6-medium col-12-small">
+										<a class="image fit"><img  src="images\islandsurvival\basic biomes 17028.png" alt="Fractal brownian motion terrain" 
+										width="100%" height="100%"/></a>
+										<p>Inital island generation through temperature and moisture noise maps</p>
+									</div>
+									<div class="col-4 col-6-medium col-12-small">
+										<a class="image fit"><img src="images/islandsurvival/island based biomes.png" alt="Added on domain warping" 
+										width="100%" height="100%"/>
+										</a>
+										<p>Overhall of generation to now work so each island has its own individual 
+											voronoi noise map
+										</p>
+									</div>
+									<div class="col-4 col-6-medium col-12-small">
+										<a class="image fit"><img src="images\islandsurvival\island biomes with plants.png" alt="Added on rolling hills" 
+										width="100%" height="100%"/>
+										</a>
+										<p>Updated each biomes stats and added basic plant spawning based on terrains vertices</p>
+									</div>
+									<div class="col-4 col-6-medium col-12-small">
+										<a class="image fit"><img src="images\islandsurvival\final island and plants.png" alt="Added ridges" 
+										width="100%" height="100%"/>
+										</a>
+										<p>Each biome given own unique generation using method outlined above as well as made plant 
+											spawns more realistic
+										</p>
+									</div>
+									<div class="col-4 col-6-medium col-12-small">
+										<a class="image fit"><img src="images\islandsurvival\biome blueprint.PNG" alt="Added flatter areas" 
+										width="100%" height="100%"/>
+										</a>
+										<p>Each biome has its own blueprint holding its stats making it easy to add and remove any biome</p>
+									</div>
+									<div class="col-4 col-6-medium col-12-small">
+										<a class="image fit"><img src="images\islandsurvival\biome meshes.PNG" alt="Added terraces" 
+										width="100%" height="100%"/>
+										</a>
+										<p>Each plant has a density within a biome as well as population which spawn
+											around a random centre point
+										</p>
+									</div>
+								</div>
+							</section>
 							
 							<div style="text-align: center;">
 								<a class="linkbuttontext" href="https://jokermain.itch.io/island-survival"
@@ -304,24 +334,24 @@
 							<span id="info-overview" style="background-color: dodgerblue">C#</span>
 							<span id="info-overview" style="background-color: firebrick">Gameplay</span>
 							<span id="info-overview" style="background-color: firebrick">AI</span>
-							<span id="info-overview" style="background-color: forestgreen">Student Work(Individual)</span>
+							<span id="info-overview" style="background-color: forestgreen">Student Work(Group of 5)</span>
 							<div class="project-overview">
-								<iframe src="https://www.youtube.com/embed/7tUjPiNyuG8?rel=0" frameborder="0" title="Pacman showcase video"
+								<iframe src="https://www.youtube.com/embed/7kQYIgihIgQ?rel=0" frameborder="0" title="The Raindrop game trailer"
 								allowfullscreen>
 								</iframe>
 								<span class="overview-info">
-									<p class="subheading">Some features to highlight:</p>
+									<p class="subheading">What I Implemented</p>
 									<ul>
-										<li>Procedural Maze System using Recursive Backtracking</li>
-										<li>4 Types of Sheep AI</li>
-										<li>Character / AI movement via tweening</li>
+										<li>Player Controller</li>
+										<li>Random Level Generation</li>
+										<li>All Menus and UI Elements</li>
 										<li>Saving / Loading using PlayerPrefs</li>
-										<li>Minimap system</li>
+										<li>Wind and Blackhole Systems</li>
 									</ul>
 								</span>
 							</div>	
 							<p class="subheading">Project Overview</p>						
-							<p>	This first year project, developed largely between <b>August 2020 - October 2020(10 Weeks)</b> was undertaken 
+							<p>	This second year project, developed largely between <b>August 2020 - October 2020(10 Weeks)</b> was undertaken 
 								to learn the fundamentals of game development. Tasked with recreating the entirety of the game Pac-Man with a 
 								distinctive style as well as creating a unique design innovation. Here I challenged myself by implementing an 
 								entire procedural maze system, which works around the constraints of the Pac-Man level design.</p>
