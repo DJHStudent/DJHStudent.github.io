@@ -58,14 +58,15 @@
 											</p>
 										</div>
 										<div class="col-4 col-6-medium col-12-small">
-											<a href="#raindrop" class="image fit"><img src="images/Maze/maze5.PNG" alt="pacman game"></a>
+											<a href="#raindrop" class="image fit"><img src="images/Raindrop/cover image.PNG" alt="The Raindrop"></a>
 											<h2 style="font-size: x-large;">The Raindrop</h2>
 											<span id="info-overview" style="background-color: purple">Unity v2020.1.1.1.1</span>
 											<span id="info-overview" style="background-color: dodgerblue">C#</span>
 											<span id="info-overview" style="background-color: firebrick">Gameplay</span>
-											<span id="info-overview" style="background-color: firebrick">AI</span>
+											<span id="info-overview" style="background-color: firebrick">Randomized Levels</span>
 											<span id="info-overview" style="background-color: forestgreen">Group of 5</span>
-											<p>A vertical scroller about the love between the sun and a raindrop.
+											<p>A vertical scroller about the love between the sun and a raindrop
+												where every playthrough is different.
 												<a class="linkbutton" href="#raindrop">See More</a>
 											</p>
 										</div>
@@ -114,16 +115,8 @@
 
 						<!-- Contact -->
 							<article id="contact" class="panel">
-								<header class="page-title">
-									<a href="#about" class='linkbuttontext'>
-										<span class="arrow icon solid fa-chevron-left"></span>
-									</a>
-									
+								<header>									
 									<h2>Contact Me</h2>
-									
-									<a href="#island-survival" class='linkbuttontext'>
-										<span class="arrow icon solid fa-chevron-right"></span>
-									</a>
 								</header>
 								<div id="Contact-Info">
 									<h3>GitHub</h3>
@@ -132,7 +125,7 @@
 								</div>
 							
 
-							<!--	<form action="#" method="post">
+								<form action="#" method="post">
 									<div>
 										<div class="row">
 											<div class="col-6 col-12-medium">
@@ -152,7 +145,7 @@
 											</div>
 										</div>
 									</div>
-								-->
+								
 								</form>
 							</article>
 
@@ -191,11 +184,11 @@
 								</span>
 							</div>	
 							<p class="subheading">Project Overview</p>						
-							<p>Created as a second year project, where any AI or PCG system could be implemented, this tech demo 
+							<p>Created as a second-year project, where any AI or PCG system could be implemented, this tech demo 
 								has players collect fuel for their boat and evade zombies on some randomly generated islands. 
 								The terrain system was implemented with the idea of its future use within 
 								many other projects so that their development times can be significantly reduced. Due to this all elements
-								have been designed to be highly customisable and easily removable based on the projects needs.							
+								have been designed to be highly customisable and easily removable based on the project's needs.							
 								The added challenge of 
 								island generation was implemented to allow for a more natural border to the game world.</p>
 							<div class="row" style="margin-left: 20%; margin-right: 20%;">
@@ -333,7 +326,7 @@
 							<span id="info-overview" style="background-color: purple">Unity v2020.1.1.1.1</span>
 							<span id="info-overview" style="background-color: dodgerblue">C#</span>
 							<span id="info-overview" style="background-color: firebrick">Gameplay</span>
-							<span id="info-overview" style="background-color: firebrick">AI</span>
+							<span id="info-overview" style="background-color: firebrick">Randomized Levels</span>
 							<span id="info-overview" style="background-color: forestgreen">Student Work(Group of 5)</span>
 							<div class="project-overview">
 								<iframe src="https://www.youtube.com/embed/7kQYIgihIgQ?rel=0" frameborder="0" title="The Raindrop game trailer"
@@ -351,22 +344,40 @@
 								</span>
 							</div>	
 							<p class="subheading">Project Overview</p>						
-							<p>	This second year project, developed largely between <b>August 2020 - October 2020(10 Weeks)</b> was undertaken 
-								to learn the fundamentals of game development. Tasked with recreating the entirety of the game Pac-Man with a 
-								distinctive style as well as creating a unique design innovation. Here I challenged myself by implementing an 
-								entire procedural maze system, which works around the constraints of the Pac-Man level design.</p>
-							<div class="row" style="margin-left: 20%; margin-right: 20%;">
-								<div class="col-6 col-6-medium col-12-small">
-									<p class="award-child">Project selected for and shown at the:</p>
+							<p>Created as a second-year project, this sees the player, the sun, fall in love with a raindrop, 
+								gain its trust and guide it up through various stages from the lake, all the way up to space. 
+								Being made with the two themes <b><em>the life of a raindrop</em></b> and <b><em>trust and betrayal</em></b> at its core the aim 
+								was to make an enjoyable game which followed good design principles. As the <b>main programmer</b> I 
+								endeavoured to ensure that the elements developed were highly modular and easy to use across all 
+								the various levels of the game.</p>
+								<p class="subheading">Random Level Generation</p>
+								<p>Steps:</p>
+								<ol>
+									<li>Generates maze border</li>
+									<li>Spawns in centre piece and teleports</li>
+									<li>Uses a <span id="info-overview" style="background-color: firebrick">recursive backtracking</span> 
+										method to generate the maze paths</li>
+									This was a particularly challenging system to implement as all inside walls needed to be at 
+									least 2-thick requiring a number of extra conditions to be determined and checked against. 
+									<li>Spawn in correct map tiles with appropriate orientation</li>
+								</ol>	
+								<p style="font-weight: bold; margin-bottom: 0; text-align: center;">See how the Maze Generator Changed over Development</p>
+								<div style="text-align: center; margin: 0 auto;" class="row">
+									<div class="col-3 col-6-medium col-12-small">
+										<img src="images\Maze\maze1.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+									</div>
+									<div class="col-3 col-6-medium col-12-small">
+										<img src="images\Maze\maze2.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+									</div>
+									<div class="col-3 col-6-medium col-12-small">
+										<img src="images\Maze\maze4.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+									</div>
+									<div class="col-3 col-6-medium col-12-small">
+										<img src="images\Maze\maze5.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+									</div>
 								</div>
-								<div class="col-6 col-6-medium col-12-small">
-									<a href="https://showcase.gamesstudio.org/spring-2020/" target="_blank" class="award-child">
-										<img  src="images/2020 Showcase.PNG"  alt="Spring 2020 showcase banner"
-											width="100%" height="90%"/>
-									</a>
-								</div>
-							</div>
-							<p class="subheading">Procedural Maze Generation</p>
+
+								<p class="subheading">Player Controller</p>
 							<p>Steps:</p>
 							<ol>
 								<li>Generates maze border</li>
