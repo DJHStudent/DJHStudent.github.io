@@ -151,6 +151,7 @@ input, select, textarea {
 
 		.row > .col-5 {
 			width: 41.66667%;
+			margin: auto;
 		}
 
 		.row > .off-5 {
@@ -1306,7 +1307,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: url("images/overla.jpg"), url("images/pacman.png");
+		background-color: #363636;
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 100%;
 		background-attachment: fixed;
@@ -1327,7 +1328,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
-		color: #777777;
+		color: #363636;
 		font-size: 20pt;
 		line-height: 1.75em;
 	}
@@ -1377,6 +1378,20 @@ input, select, textarea {
 	h2 {
 		font-size: 1.8em;
 		letter-spacing: -0.015em;
+		font-weight: bold;
+		margin-right: 0.5%;
+		margin-left: 0.5%;
+		
+		background-color: #363636;
+		padding-top: 1%;
+		padding-bottom: 1%;
+		color: #E6E6E6;
+		text-align: center;
+	}
+
+	.row h2{
+		margin-left: 0%;
+		margin-right: 0%;
 	}
 
 	h3, h4, h5, h6 {
@@ -1555,9 +1570,13 @@ input, select, textarea {
 			width: 100%;
 		}
 
-		.image.fit {
+		.image.fit{
 			display: block;
 			width: 100%;
+			border: #408EC6;
+			border-style: solid;
+			border-width: 0.2em;
+			border-radius: 0.2em;		
 		}
 
 		.image.featured {
@@ -1749,6 +1768,7 @@ input, select, textarea {
 			text-transform: none !important;
 			font-family: 'Font Awesome 5 Free';
 			font-weight: 400;
+			color: #E6E6E6;
 		}
 
 		.icon.solid:before {
@@ -1771,19 +1791,23 @@ input, select, textarea {
 
 	#nav {
 		text-align: center;
-		height: 4.25em;
+		height: 2.25em;
 		cursor: default;
+		position: fixed;
+		z-index: 2;
+		background-color: #363636;
+		margin: auto;
+		width: 100%;
 	}
 
 		#nav a {
 			position: relative;
 			display: inline-block;
 			color: #ffffff;
-			width: 1em;
-			height: 1em;
-			line-height: 0.9em;
-			font-size: 2.5em;
-			margin: 0 0.25em 0 0.25em;
+			line-height: 0.0em;
+			font-size: 1.5em;
+			height: 100%;
+			margin: 0.0em 0.0 0 0.0em;
 			opacity: 0.35;
 			outline: 0;
 			-moz-transition: opacity .25s ease-in-out;
@@ -1882,7 +1906,7 @@ input, select, textarea {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
-		display: flex;
+		display: inline;
 		-moz-flex-direction: column;
 		-webkit-flex-direction: column;
 		-ms-flex-direction: column;
@@ -1947,7 +1971,7 @@ input, select, textarea {
 		position: relative;
 		overflow: hidden;
 		width: 100%;
-		background: #ffffff;
+		background: #E6E6E6;
 		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
 		-moz-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
 		-webkit-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
@@ -1962,7 +1986,7 @@ input, select, textarea {
 			transition: opacity 0.25s ease-in-out;
 			margin-bottom: 0;
 			position: relative;
-			padding: 1.5em 2.5em 2.5em 2.5em;
+			padding: 5em 2.5em 2.5em 2.5em;
 			width: 100%;
 		}
 
@@ -2198,7 +2222,8 @@ input, select, textarea {
 	text-align: center;
 	padding: 0.25em 1em 0.25em 1em;
 	font-size: 1em;
-	margin-top: 1em;
+	margin-top: 0.25em;
+	display: inline-block;
 }
 #logo{
 	margin-top: 1em;
@@ -2207,4 +2232,83 @@ input, select, textarea {
 
 #Contact-Info{
 	text-align: center;
+}
+
+.linkbutton, .linkbuttontext, .linkbuttonheader{
+	color: #363636;
+	background-color: #408EC6;
+	border: #408EC6;
+	font-weight: bolder;
+	border-style: solid;
+	border-width: 0.2em;
+	text-align: center;
+	padding: 1px 8px 1px 8px;
+	margin-top: 5px;
+	font-size: 1em;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.linkbutton, .linkbuttontext{
+	border-radius: 0.2em;
+}
+
+.linkbutton:hover, .linkbutton:active, .linkbuttontext:hover, .linkbuttontext:active, .image.fit:hover{
+	border: #363636;
+	border-radius: 0.2em;
+	border-style: solid;
+	border-width: 0.2em;
+}
+
+.linkbuttontext, .linkbuttonheader{
+	padding: 16px 16px 16px 16px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+header .linkbuttontext{
+	padding: 22% 10% 22% 10%;
+	border-radius: 0;
+}
+
+.subheading{
+	font-weight: bold;
+	color: #575757;
+	border-bottom: solid medium #575757;
+}
+
+iframe{
+	width: 98%;
+	height: 20em;
+	margin-top: 1%;
+}
+
+.project-overview{
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+}
+
+.overview-info{
+	margin-left: 5%;
+}
+
+.award-container{
+	display: flex;
+	align-content: flex-start;
+	flex-wrap: wrap;
+	margin: auto;
+	width: 50%;
+}
+
+.award-child{
+	font-weight: bolder;
+	text-align: center;
+	align-content: center;
+}
+
+.page-title{
+	display: grid;
+	grid-template-columns: 3% 94% 3%;
+	text-align: center;
+	align-items: center;
 }
