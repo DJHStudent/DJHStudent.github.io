@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Astral by HTML5 UP</title>
+		<title>David Hestelow Game Programmer Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -261,7 +261,7 @@
 									<div class="col-4 col-6-medium col-12-small">
 										<a class="image fit"><img  src="images\islandsurvival\basic biomes 17028.png" alt="Fractal brownian motion terrain" 
 										width="100%" height="100%"/></a>
-										<p>Inital island generation through temperature and moisture noise maps</p>
+										<p>Inital biome generation through temperature and moisture noise maps</p>
 									</div>
 									<div class="col-4 col-6-medium col-12-small">
 										<a class="image fit"><img src="images/islandsurvival/island based biomes.png" alt="Added on domain warping" 
@@ -351,57 +351,82 @@
 								endeavoured to ensure that the elements developed were highly modular and easy to use across all 
 								the various levels of the game.</p>
 								<p class="subheading">Random Level Generation</p>
-								<p>Steps:</p>
-								<ol>
-									<li>Generates maze border</li>
-									<li>Spawns in centre piece and teleports</li>
-									<li>Uses a <span id="info-overview" style="background-color: firebrick">recursive backtracking</span> 
-										method to generate the maze paths</li>
-									This was a particularly challenging system to implement as all inside walls needed to be at 
-									least 2-thick requiring a number of extra conditions to be determined and checked against. 
-									<li>Spawn in correct map tiles with appropriate orientation</li>
-								</ol>	
-								<p style="font-weight: bold; margin-bottom: 0; text-align: center;">See how the Maze Generator Changed over Development</p>
+								<p>
+									A main part of this generation was an XXX system where the components of the level got broken up
+									into various stages based on difficulty and only spawned in based on the players progression and 
+									the stage that came before it. Within this it was ensured that no falling elements, such as leaves,
+									could appear in a similar place multiple times in a row as well as the gaps never appearing 
+									too far appart or close together. All this has ensured players do not get overwhellmed to early
+									and are required to move with each new obstical.
+								</p>
+								<p>
+									Below is an overview of the level generator and its parameters for level 1:
+								</p>
 								<div style="text-align: center; margin: 0 auto;" class="row">
-									<div class="col-3 col-6-medium col-12-small">
-										<img src="images\Maze\maze1.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+									<div class="col-4 col-6-medium col-12-small">
+										<a class="image fit sidetext" style="width: 70%;"><img src="images\Raindrop\leveleasy.gif" alt="Progression of Maze Generate over Development" 
+											width="100%" height="100%"/></a>
+										<p>The easiest sections of the level, fewest leaves and branches farthest appart.
+											Appears randomly, at level start and after the hardcore section
+										</p>
 									</div>
-									<div class="col-3 col-6-medium col-12-small">
-										<img src="images\Maze\maze2.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+									<div class="col-4 col-6-medium col-12-small">
+										<a class="image fit sidetext" style="width: 70%;"><img src="images\Raindrop\levelmedium.gif" alt="Progression of Maze Generate over Development" 
+											width="100%" height="100%"/></a>
+											<p>A medium difficutly section, with branches closer together and some more leaves.
+												Appears randomly
+											</p>
 									</div>
-									<div class="col-3 col-6-medium col-12-small">
-										<img src="images\Maze\maze4.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+									<div class="col-4 col-6-medium col-12-small">
+										<a class="image fit sidetext" style="width: 70%;"><img src="images\Raindrop\levelhard.gif" alt="Progression of Maze Generate over Development" 
+											width="100%" height="100%"/></a>
+										<p>The hard section of the level with branches close together and many leaves spawning.
+											Appears randomly											
+										</p>
 									</div>
-									<div class="col-3 col-6-medium col-12-small">
-										<img src="images\Maze\maze5.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+									<div class="col-4 col-6-medium col-12-small">
+										<a class="image fit sidetext" style="width: 70%;"><img src="images\Raindrop\levelhardcore.gif" alt="Progression of Maze Generate over Development" 
+											width="100%" height="100%"/></a>
+										<p>Hardcore, the hardest section, containing only many leaves needing to be dodged.
+											Appears randomly											
+										</p>
+									</div>
+									<div class="col-4 col-6-medium col-12-small">
+										<a class="image fit sidetext" style="width: 70%;"><img src="images\Raindrop\levelgenstats.PNG" alt="Progression of Maze Generate over Development" 
+											width="100%" height="100%"/></a>
+										<p>The stats for the level generation, holding the wall array which contains all sprites spawining in the level and
+											their min and max x positions. The level pacing array holding the 4 sections, there frequency and frequency of walls 
+											spawning within it. 											
+										</p>
 									</div>
 								</div>
+	
+
 
 								<p class="subheading">Player Controller</p>
-							<p>Steps:</p>
-							<ol>
-								<li>Generates maze border</li>
-								<li>Spawns in centre piece and teleports</li>
-								<li>Uses a <span id="info-overview" style="background-color: firebrick">recursive backtracking</span> 
-									method to generate the maze paths</li>
-								This was a particularly challenging system to implement as all inside walls needed to be at 
-								least 2-thick requiring a number of extra conditions to be determined and checked against. 
-								<li>Spawn in correct map tiles with appropriate orientation</li>
-							</ol>	
-							<p style="font-weight: bold; margin-bottom: 0; text-align: center;">See how the Maze Generator Changed over Development</p>
-							<div style="text-align: center; margin: 0 auto;" class="row">
-								<div class="col-3 col-6-medium col-12-small">
-									<img src="images\Maze\maze1.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
-								</div>
-								<div class="col-3 col-6-medium col-12-small">
-									<img src="images\Maze\maze2.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
-								</div>
-								<div class="col-3 col-6-medium col-12-small">
-									<img src="images\Maze\maze4.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
-								</div>
-								<div class="col-3 col-6-medium col-12-small">
-									<img src="images\Maze\maze5.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
-								</div>
+								<p>
+									The goal here was to develope a system in which the player, controlling the sunbeam, would be able to guide the raindrop
+									around the various obsticals throughout the levels. A core challenge here was in getting the movement to feel nice
+									and intuitive requiring a variety of user testing and refinement as seen below:
+								</p>
+								<div style="text-align: center; margin: 0 auto;" class="row">
+									<div class="col-6 col-6-medium col-12-small">
+										<a class="image fit sidetext" ><img src="images\Raindrop\Movement Prototype.gif" alt="Player Movement Prototype gif" 
+											width="100%" height="100%"/>
+										</a>										
+										<p>An early prototype where the sunbeam moves across the screen and the raindrop will only move when 
+											a certain distance from it
+										</p>
+									</div>
+								
+									<div class="col-6 col-6-medium col-12-small">
+										<a class="image fit sidetext"><img src="images\Raindrop\Final Movement.gif" alt="Final player movement gif" 
+											width="100%" height="100%"/>
+										</a>
+										<p>The refined and finalised controller with the sunbeam rotating and the raindrop constantly moving towards it
+											with no limit on how far it can get
+										</p>
+									</div>
 							</div>
 						</article>
 
@@ -468,16 +493,20 @@
 							<p style="font-weight: bold; margin-bottom: 0; text-align: center;">See how the Maze Generator Changed over Development</p>
 							<div style="text-align: center; margin: 0 auto;" class="row">
 								<div class="col-3 col-6-medium col-12-small">
-									<img src="images\Maze\maze1.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+									<a class="image fit"><img src="images\Maze\maze1.PNG" alt="Progression of Maze Generate over Development" 
+										width="100%" height="100%"/></a>
 								</div>
 								<div class="col-3 col-6-medium col-12-small">
-									<img src="images\Maze\maze2.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+									<a class="image fit"><img src="images\Maze\maze2.PNG" alt="Progression of Maze Generate over Development" 
+										width="100%" height="100%"/></a>
 								</div>
 								<div class="col-3 col-6-medium col-12-small">
-									<img src="images\Maze\maze4.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+									<a class="image fit"><img src="images\Maze\maze4.PNG" alt="Progression of Maze Generate over Development" 
+										width="100%" height="100%"/></a>
 								</div>
 								<div class="col-3 col-6-medium col-12-small">
-									<img src="images\Maze\maze5.PNG" alt="Progression of Maze Generate over Development" width="100%" height="100%"/>
+									<a class="image fit"><img src="images\Maze\maze5.PNG" alt="Progression of Maze Generate over Development" 
+										width="100%" height="100%"/></a>
 								</div>
 							</div>
 
@@ -485,19 +514,19 @@
 							<p class="subheading">Sheep AI</p>
 							<div style="text-align: center; margin: 0 auto;" class="row">
 								<span class="col-3 col-6-medium col-12-small">
-									<img src="gifs/BlueSheep.gif" alt="Blue Sheep" style="align-items: center;"/>
+									<a class="image fit sidetext"><img src="gifs/BlueSheep.gif" alt="Blue Sheep" style="align-items: center;"/></a>
 									<p>Moves Away from Player</p>
 								</span>
 								<span class="col-3 col-6-medium col-12-small">
-									<img src="gifs/OrangeSheep.gif" alt="Orange Sheep"/>
+									<a class="image fit sidetext"><img src="gifs/OrangeSheep.gif" alt="Orange Sheep"/></a>
 									<p>Moves Towards Player</p>
 								</span>
 								<span class="col-3 col-6-medium col-12-small">
-									<img src="gifs/PinkSheep.gif" alt="Pink Sheep"/>
+									<a class="image fit sidetext"><img src="gifs/PinkSheep.gif" alt="Pink Sheep"/></a>
 									<p>Moves in Random Directions</p>
 								</span>
 								<span class="col-3 col-6-medium col-12-small">
-									<img src="gifs/RedSheep.gif" alt="Red Sheep"/>
+									<a class="image fit sidetext"><img src="gifs/RedSheep.gif" alt="Red Sheep"/></a>
 									<p>Follows Map Border in Clockwise Direction</p>
 								</span>
 							</div>

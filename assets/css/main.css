@@ -1579,6 +1579,11 @@ input, select, textarea {
 			border-radius: 0.2em;		
 		}
 
+		.image.fit.sidetext{
+			width: 45%;
+			margin: auto;
+		}
+
 		.image.featured {
 			display: block;
 			width: 100%;
