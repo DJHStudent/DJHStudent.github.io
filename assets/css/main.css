@@ -1796,25 +1796,26 @@ input, select, textarea {
 
 	#nav {
 		text-align: center;
-		height: 2.25em;
 		cursor: default;
 		position: fixed;
 		z-index: 2;
 		background-color: #363636;
 		margin: auto;
 		width: 100%;
+		display: inline-block;
 	}
 
 		#nav a {
-			position: relative;
-			display: inline-block;
 			color: #ffffff;
 			line-height: 0.0em;
 			font-size: 1.5em;
-			height: 100%;
-			margin: 0.0em 0.0 0 0.0em;
+			margin-left: 0em;
+			margin-right: 0em;
+			margin-top: 0.25%;
+			margin-bottom: 0.25%;
 			opacity: 0.35;
 			outline: 0;
+			width: auto;
 			-moz-transition: opacity .25s ease-in-out;
 			-webkit-transition: opacity .25s ease-in-out;
 			-ms-transition: opacity .25s ease-in-out;
@@ -1831,14 +1832,10 @@ input, select, textarea {
 
 			#nav a:after {
 				content: '';
-				display: block;
+				display: inline-block;
 				position: absolute;
-				left: 50%;
-				bottom: -0.75em;
+				margin-bottom: -0.75em;
 				margin-left: -0.5em;
-				border-bottom: solid 0em #ffffff;
-				border-left: solid 0.5em transparent;
-				border-right: solid 0.5em transparent;
 				-moz-transition: border-bottom-width .25s ease-in-out;
 				-webkit-transition: border-bottom-width .25s ease-in-out;
 				-ms-transition: border-bottom-width .25s ease-in-out;
@@ -2265,10 +2262,13 @@ input, select, textarea {
 	border-width: 0.2em;
 }
 
-.linkbuttontext, .linkbuttonheader{
+.linkbuttontext{
 	padding: 16px 16px 16px 16px;
 	margin-left: 5%;
 	margin-right: 5%;
+}
+.linkbuttonheader{
+	padding: 16px 16px 16px 16px;
 }
 
 header .linkbuttontext{
