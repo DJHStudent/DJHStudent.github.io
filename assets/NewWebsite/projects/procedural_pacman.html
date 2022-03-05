@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Large Scale Procedural Pacman</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<h1><a href="../index.html">David Hestelow</a></h1>
+					<nav>
+						<a id="header-button"href="../index.html#one">About Me</a>
+						<a id="header-button" href="../index.html#four">Student Projects</a>
+						<a id="header-button" href="#footer">Contact</a>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+						<!-- Menu -->
+						<nav id="menu">
+							<div class="inner">
+								<h2>Menu</h2>
+								<ul class="links">
+									<li><a href="../index.html">Home</a></li>
+									<li><a href="generic.html">Generic</a></li>
+									<li><a href="elements.html">Elements</a></li>
+									<li><a href="../index.html#four">Student Projects</a></li>
+									<li><a href="#footer">Get in Touch</a></li>
+								</ul>
+								<a href="#" class="close">Close</a>
+							</div>
+						</nav>
+			
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Large Scale Procedural Pacman</h2>
+								<span id="overview-text" style="background-color: #1F263D;">Unity Engine</span>
+								<span id="overview-text" style="background-color: #2C3557;">C#</span>
+								<span id="overview-text" style="background-color: #4C5C96;">AI</span>
+								<span id="overview-text" style="background-color: #4C5C96;">Randomized Mazes</span>
+								<span id="overview-text" style="background-color: #748CE3;">Group of 5</span>
+									<div style="margin: auto; margin-top: 4em; display: flex; width: 70%;">
+										<a href="#" class="special">View code on Github</a>
+										<a href="#" class="special" style="margin-left: 2em;">Download and play from itch.io</a>
+									</div>	
+								<!-- <p>Collect fuel and evade zombies in this LAN multiplayer, random island generation tech demo.</p> -->
+							</div>
+						</header>
+
+						<!-- Content -->
+						<div id="about">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<span class="image right" height="1em"><img src="../images/Pacman/BannerImg.PNG" alt="" /></span>									
+										<h3 class="major">Features to Highlight</h3>
+										<ul>
+											<li>Procedural Maze Generation Based on Any User Defined Size</li>
+											<li>4 Different Types of AI</li>
+											<li>Minimap System</li>
+											<li>Complete Saving and Loading of Players Scores</li>
+										</ul>
+									</div>
+									<p>Made as a first-year project with the goal of making a recreation of the game Pac-Man with your 
+										own unique style. Due to the special constraints of the Pac-Man maze design, the generator contained 
+										some unique challenges, such as all inside walls needing to be at least 2 thick. As well as this the use 
+										of different assets based on whether the tile bordered the edge of the map or a path.</p>
+										<div class="row gtr-uniform" style="margin-top: 2em;">
+											<div class="col-3">
+												<span class="image fit"><img src="../images/Pacman/BlueSheep.gif" alt="" /></span>
+												<p class="imginfo">Moves away from player</p>
+											</div>
+											
+											<div class="col-3">
+												<span class="image fit"><img src="../images/Pacman/OrangeSheep.gif" alt="" /></span>
+												<p class="imginfo">Moves towards player</p>
+											</div>
+											<div class="col-3">
+												<span class="image fit"><img src="../images/Pacman/PinkSheep.gif" alt="" /></span>
+												<p class="imginfo">Moves in random directions</p>
+											</div>
+											<div class="col-3">
+												<span class="image fit"><img src="../images/Pacman/RedSheep.gif" alt="" /></span>
+												<p class="imginfo">Follows map border in clockwise direction</p>
+											</div>
+										</div>
+										<p>Within the sheep AI one main challenge, especially on larger maps, was creating an efficient 
+											and accurate navigation system that would be more precise than just choosing the direction 
+											to move at each intersection.  
+											<b>A* pathfinding</b> was implemented to solve this, having the condition that it would only calculate a path
+											up to 40 tiles away, instead of right to the goal, in order to get optimal 
+											performance with reliable accuracy.</p>
+
+									<h3 class="major">This project was shown at UTS during</h3>
+									<a href="https://showcase.gamesstudio.org/spring-2020/" target="_blank"
+									 class="image"><img src="../images/Pacman/2020 Showcase.PNG" 
+											alt="Island Survival Banner Image" width="50%"/></a>	
+											
+										<section style="margin-top: 4em;">
+											<h3 class="major">Evolutuion of the maze generator</h3>
+											<div class="row gtr-uniform">
+												<div class="col-4">
+													<span class="image fit"><img src="../images/Pacman/Maze0.png" alt="" /></span>
+													<p class="imginfo">Initial carving using just one path</p>
+												</div>
+												<div class="col-4">
+													<span class="image fit"><img src="../images/Pacman/Maze1.png" alt="" /></span>
+													<p class="imginfo">Fully implemented path carving using recursive backtracking</p>
+												</div>
+												<div class="col-4">
+													<span class="image fit"><img src="../images/Pacman/Maze22.png" alt="" /></span>
+													<p class="imginfo">Inital testing of correct asset placement</p>
+												</div>
+												<div class="col-4">
+													<span class="image fit"><img src="../images/Pacman/Maze4.png" alt="" /></span>
+													<p class="imginfo">Further refined asset placement and path carving</p>
+												</div>
+												<div class="col-4">
+													<span class="image fit"><img src="../images/Pacman/Maze2.png" alt="" /></span>
+													<p class="imginfo">Completed maze with correct asset placement and orientation</p>
+												</div>
+											</div>
+									</section>	
+								</div>
+							</div>
+						</div>
+
+					</section>
+
+				<!-- Footer style="display: inline !important;"style="margin-left: 2em; display: inline !important;"-->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Untitled Inc<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

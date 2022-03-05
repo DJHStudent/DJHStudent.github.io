@@ -20,23 +20,23 @@
 		<div id="page-wrapper">
 
 				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">David Hestelow</a></h1>
-						<nav>
-							<a id="header-button"href="#one">About</a>
-							<a id="header-button" href="#four">Student Projects</a>
-							<a id="header-button" href="#footer">Contact</a>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+				<header id="header" class="alt">
+					<h1><a href="index.html">David Hestelow</a></h1>
+					<nav>
+						<a id="header-button"href="#one">About Me</a>
+						<a id="header-button" href="#four">Student Projects</a>
+						<a id="header-button" href="#footer">Contact</a>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
 				<!-- Menu -->
 				<nav id="menu">
 					<div class="inner">
 						<h2>Menu</h2>
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
+							<li><a href="projects/generic.html">Generic</a></li>
+							<li><a href="projects/elements.html">Elements</a></li>
 							<li><a href="#four">Student Projects</a></li>
 							<li><a href="#footer">Get in Touch</a></li>
 						</ul>
@@ -90,7 +90,7 @@
 								</div>
 							</section>
 
-						<!-- student projects -->
+				<!--		 student projects 
 						<section id="four" class="wrapper alt style1">
 							<div class="inner">
 								<h2 class="major">Student Projects</h2>
@@ -99,6 +99,7 @@
 								</div>
 							</div>
 						</section>
+							
 						<section id="IslandSurvival" class="wrapper spotlight style1">
 							<div class="inner">
 								<div class="content">
@@ -111,7 +112,13 @@
 										<span class="image right" height="1em"><img src="images/IslandSurvival/BannerImg.png" alt="" /></span>
 										
 									<p>Collect fuel and evade zombies in this LAN multiplayer, random island generation tech demo.</p>
-									
+									<h3 class = "major">Things I Implemented</h3>
+									<ul>
+										<li>Entire procedural terrain system, including biomes and object spawning</li>
+										<li>Majority of LAN multiplayer system</li>
+										<li>Fuel pickup system</li>
+										<li>Main menu and lobby UI elements</li>
+									</ul>
 									<p>Created as a second-year project, my goal with the terrain generation was to develop a highly customizable and 
 										reusable system that would speed up the development of future projects. This required thorough planning and 
 										development to ensure the creation of a modular system which is easy to use within the editor.</p>
@@ -119,16 +126,13 @@
 									<p>Along with this I was a main developer on the multiplayer system which required many 
 										optimization stages to ensure lag, largely due to unnecessary replications of the AI, 
 										could be reduced. Due to the terrains high network cost, it was decided that only the 
-										vital information, such as its seed, would be sent to the client’s machines so that they 
+										vital information, such as its seed, would be sent to the client's machines so that they 
 										could all independently generate the same terrain.</p>
 									<p>Must mention shown at student showcase due to goodness of the product</p>
-									<h3>Things I Implemented</h3>
-									<ul>
-										<li>Entire procedural terrain system, including biomes and object spawning</li>
-										<li>Majority of LAN multiplayer system</li>
-										<li>Fuel pickup system</li>
-										<li>Main menu and lobby UI elements</li>
-									</ul>
+							
+									<h3 class="major">This project was shown at UTS during</h3>
+									<a href="https://www.uts.edu.au/current-students/current-students-information-faculty-engineering-and-it/prototype-exhibition-projects-2021" target="_blank" class="image"><img src="../images/IslandSurvival/2021 Showcase.PNG" 
+											alt="Island Survival Banner Image" /></a>
 									
 									<section style="margin-top: 2em;">
 										<h3 class="major">Evolutuion of terrain system</h3>
@@ -167,7 +171,7 @@
 							</div>
 							
 						</section>
-					<!--	<section id="six" class="wrapper alt spotlight style2">
+				 	<section id="six" class="wrapper alt spotlight style2">
 							<div class="inner">
 								<section>
 									<h3 class="major">Evolutuion of terrain system	</h3>
@@ -182,12 +186,13 @@
 								</section>
 							</div>
 						</section> -->
-							<section id="six" class="wrapper style3">
+							<section id="four" class="wrapper style3">
 								<div class="inner">
 									<h2 class="major">Student Projects</h2>
+									<p>Highlighted projects from my time studying game development at UTS</p>
 									<section class="features">
 										<article>
-											<a href="#" class="image"><img src="images/IslandSurvival/BannerImg.png" 
+											<a href="projects/island_survival.html" class="image"><img src="images/IslandSurvival/BannerImg.png" 
 												alt="Island Survival Banner Image" /></a>
 											<h3 class="major">Island Survival</h3>
 											<span id="overview-text" style="background-color: #1F263D;">Unreal Engine 4</span>
@@ -197,18 +202,18 @@
 											<span id="overview-text" style="background-color: #748CE3;">Group of 2</span>
 											<p>Collect fuel and evade zombies in this LAN multiplayer, random island 
 												generation tech demo.</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="projects/island_survival.html" class="special">Learn more</a>
 										</article>
 											<article>
-											<a href="#" class="image"><img src="images/Pacman/BannerImg.PNG" alt="Pacman banner image" /></a>
+											<a href="projects/procedural_pacman.html" class="image"><img src="images/Pacman/BannerImg.PNG" alt="Pacman banner image" /></a>
 											<h3 class="major">Large Scale Procedural Pacman</h3>
-											<span id="overview-text" style="background-color: #1F263D;">Unity v22222</span>
+											<span id="overview-text" style="background-color: #1F263D;">Unity Engine</span>
 											<span id="overview-text" style="background-color: #2C3557;">C#</span>
 											<span id="overview-text" style="background-color: #4C5C96;">AI</span>
 											<span id="overview-text" style="background-color: #4C5C96;">Randomized Mazes</span>
 											<span id="overview-text" style="background-color: #748CE3;">Group of 5</span>
 											<p>The classic game of pacman, in my own style and with randomly generated mazes.</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="projects/procedural_pacman.html" class="special">Learn more</a>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/Raindrop/BannerImg.PNG" alt="The Raindrop banner image" /></a>

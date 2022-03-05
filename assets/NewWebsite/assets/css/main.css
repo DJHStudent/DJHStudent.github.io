@@ -7,6 +7,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+html{
+	scroll-behavior: smooth;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -3281,7 +3285,7 @@ input, select, textarea {
 		width: 100%;
 	}
 
-		#menu .inner {
+		#menu .inner, #menu #projectinfo .inner{
 			padding: 2.5em 1.5em 0.5em 1.5em ;
 			-moz-transform: translateY(0.5em);
 			-webkit-transform: translateY(0.5em);
@@ -3353,13 +3357,13 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
-			#menu .inner {
+			#menu .inner, #menu #projectinfo .inner {
 				max-height: 100%;
 				overflow-y: auto;
 				overflow-x: hidden;
 			}
 
-				#menu .inner .close {
+				#menu .inner .close, #menu #projectinfo .inner .close {
 					background-size: 1.5em 1.5em;
 				}
 
@@ -3378,7 +3382,7 @@ input, select, textarea {
 		visibility: visible;
 	}
 
-		body.is-menu-visible #menu .inner {
+	body.is-menu-visible #menu .inner, body.is-menu-visible #menu #projectinfo .inner {
 			-moz-transform: translateY(0);
 			-webkit-transform: translateY(0);
 			-ms-transform: translateY(0);
@@ -4182,5 +4186,5 @@ input, select, textarea {
 		text-align: center;
 		margin-top: -2em;
 		margin-bottom: -2em;
-		background-color: #353849;
+		background-color: #4c5c96;/*#353849*/
 	}
