@@ -4188,3 +4188,10 @@ input, select, textarea {
 		margin-bottom: -2em;
 		background-color: #4c5c96;/*#353849*/
 	}
+
+	video{
+		width: 50%;
+		margin: auto;
+		display: flex;
+		float: right;
+	}
