@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Island Survival</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<h1><a href="../index.html">David Hestelow</a></h1>
+					<nav>
+						<a id="header-button"href="../index.html#one">About Me</a>
+						<a id="header-button" href="../index.html#four">Student Projects</a>
+						<a id="header-button" href="#footer">Contact</a>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+						<!-- Menu -->
+						<nav id="menu">
+							<div class="inner">
+								<h2>Menu</h2>
+								<ul class="links">
+									<li><a href="../index.html">Home</a></li>
+									<li><a href="generic.html">Generic</a></li>
+									<li><a href="elements.html">Elements</a></li>
+									<li><a href="../index.html#four">Student Projects</a></li>
+									<li><a href="#footer">Get in Touch</a></li>
+								</ul>
+								<a href="#" class="close">Close</a>
+							</div>
+						</nav>
+			
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Island Survival</h2>
+								<span id="overview-text" style="background-color: #1A2033;">Unreal Engine 4</span>
+								<span id="overview-text" style="background-color: #262E4A;">C++</span>
+								<span id="overview-text" style="background-color: #46568A;">Multiplayer</span>
+								<span id="overview-text" style="background-color: #46568A;">Procedural Terrain</span>
+								<span id="overview-text" style="background-color: #7A96F0;">Group of 2</span>
+									<div style="margin: auto; margin-top: 4em; display: flex; width: 70%;">
+										<a href="#" class="special">View code on Github</a>
+										<a href="#" class="special" style="margin-left: 2em;">Download and play from itch.io</a>
+									</div>	
+								<!-- <p>Collect fuel and evade zombies in this LAN multiplayer, random island generation tech demo.</p> -->
+							</div>
+						</header>
+
+						<!-- Content -->
+						<div id="about">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<span class="image right" height="1em"><img src="../images/IslandSurvival/BannerImg.png" alt="" /></span>									
+										<h3 class="major">Things I Implemented</h3>
+										<ul>
+											<li>Entire procedural terrain system, including biomes and object spawning</li>
+											<li>Majority of LAN multiplayer system</li>
+											<li>Fuel pickup system</li>
+											<li>Main menu and lobby UI elements</li>
+										</ul>
+									</div>
+									<p>Created as a second-year project, my goal with the terrain generation was to develop a <b>highly customizable and 
+										reusable system</b> that would speed up the development of future projects. This required thorough foresight 
+										to ensure the creation of a modular system which would be easy to use within the editor.</p>
+									
+									<p>Along with this I was a main developer on the multiplayer system which required many 
+										optimization stages to ensure lag, largely due to unnecessary replications of the AI, 
+										could be reduced. Due to the terrains high network cost, it was decided that only the 
+										vital information, such as its seed, would be sent to the client’s machines so that they 
+										could all independently generate the same terrain.</p>
+
+									<h3 class="major">This project was shown at UTS during</h3>
+									<a href="https://www.uts.edu.au/current-students/current-students-information-faculty-engineering-and-it/prototype-exhibition-projects-2021" target="_blank" class="image"><img src="../images/IslandSurvival/2021 Showcase.PNG" 
+											alt="Island Survival Banner Image" /></a>
+									
+									<section style="margin-top: 2em;">
+										<h3 class="major">Evolutuion of the terrain system</h3>
+											<div class="row gtr-uniform">
+												<div class="col-4">
+													<span class="image fit"><img src="../images/IslandSurvival/brownianmotion.png" alt="" /></span>
+													<p class="imginfo">Initial prototype terrain</p>
+												</div>
+												<div class="col-4">
+													<span class="image fit"><img src="../images/IslandSurvival/terraces 6.png" alt="" /></span>
+													<p class="imginfo">Fully refined terrain</p>
+												</div>
+												<div class="col-4">
+													<span class="image fit"><img src="../images/IslandSurvival/island.png" alt="" /></span>
+													<p class="imginfo">Added ability to convert terrain into islands</p>
+												</div>
+												<div class="col-4">
+													<span class="image fit"><img src="../images/IslandSurvival/basic biomes 17028.png" alt="" /></span>
+													<p class="imginfo">Initial biome generation</p>
+												</div>
+												<div class="col-4">
+													<span class="image fit"><img src="../images/IslandSurvival/island based biomes.png" alt="" /></span>
+													<p class="imginfo">Refined biomes to work based off of the islands themselves</p>
+												</div>
+												<div class="col-4">
+													<span class="image fit"><img src="../images/IslandSurvival/final island and plants.png" alt="" /></span>
+													<p class="imginfo">Full terrain with refined biomes and meshes</p>
+												</div>
+											</div>
+									</section>				
+								</div>
+							</div>
+						</div>
+
+					</section>
+
+				<!-- Footer style="display: inline !important;"style="margin-left: 2em; display: inline !important;"-->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Untitled Inc<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
