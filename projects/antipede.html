@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Island Survival</title>
+		<title>Antipede</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -47,15 +47,15 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Island Survival</h2>
-								<span id="overview-text" style="background-color: #1A2033;">Unreal Engine 4</span>
-								<span id="overview-text" style="background-color: #262E4A;">C++</span>
-								<span id="overview-text" style="background-color: #46568A;">Multiplayer</span>
-								<span id="overview-text" style="background-color: #46568A;">Procedural Terrain</span>
-								<span id="overview-text" style="background-color: #7A96F0;">Group of 2</span>
+								<h2>Antipede</h2>
+								<span id="overview-text" style="background-color: #1F263D;">Unity Engine</span>
+								<span id="overview-text" style="background-color: #2C3557;">C#</span>
+								<span id="overview-text" style="background-color: #4C5C96;">AI</span>
+								<span id="overview-text" style="background-color: #4C5C96;">Stylized Main Menu</span>
+								<span id="overview-text" style="background-color: #748CE3;">Group of 5</span>
 									<div style="margin: auto; margin-top: 4em; display: flex; width: 70%;">
 										<a href="#" class="special">View code on Github</a>
-										<a href="#" class="special" style="margin-left: 2em;">Download and play from itch.io</a>
+										<a href="https://daveyd24.itch.io/antipede-sprint1" class="special" style="margin-left: 2em;">Download and play from itch.io</a>
 									</div>	
 								<!-- <p>Collect fuel and evade zombies in this LAN multiplayer, random island generation tech demo.</p> -->
 							</div>
@@ -65,59 +65,58 @@
 						<div id="about">
 							<div class="wrapper">
 								<div class="inner">
-									<div>
-										<span class="image right" height="1em"><img src="../images/IslandSurvival/BannerImg.png" alt="" /></span>									
-										<h3 class="major">Things I Implemented</h3>
+									<div style="display: inline-block; margin-bottom: 2em;">								
+										<!-- <video controls> -->
+												<!-- <source src="../Videos/PacmanGame.mp4" type="video/mp4"> -->
+											<!-- </video> -->
+										<h3 style="color: red;">Project Currently Under Active Development</h3>
+	
+										<h3 class="major">Things I Implemented/Currently Developing</h3>
 										<ul>
-											<li>Entire procedural terrain system, including biomes and object spawning</li>
-											<li>Majority of LAN multiplayer system</li>
-											<li>Fuel pickup system</li>
-											<li>Main menu and lobby UI elements</li>
+											<li>All Ant AI</li>
+											<li>Main Menu Design and Functionality</li>
+											<li>All Accessibility Options</li>
+											<li>Complete Saving and Loading of the Game</li>
 										</ul>
 									</div>
-									<p>Created as a second-year project, my goal with the terrain generation was to develop a <b>highly customizable and 
-										reusable system</b> that would speed up the development of future projects. This required thorough foresight 
-										to ensure the creation of a modular system which would be easy to use within the editor.</p>
-									
-									<p>Along with this I was a main developer on the multiplayer system which required many 
-										optimization stages to ensure lag, largely due to unnecessary replications of the AI, 
-										could be reduced. Due to the terrains high network cost, it was decided that only the 
-										vital information, such as its seed, would be sent to the client’s machines so that they 
-										could all independently generate the same terrain.</p>
-
-									<h3 class="major">This project was shown at UTS during</h3>
-									<a href="https://www.uts.edu.au/current-students/current-students-information-faculty-engineering-and-it/prototype-exhibition-projects-2021" target="_blank" class="image"><img src="../images/IslandSurvival/2021 Showcase.PNG" 
-											alt="Island Survival Banner Image" /></a>
-									
-									<section style="margin-top: 2em;"> 
-										<h3 class="major">Evolutuion of the terrain system</h3>
-											<div class="row gtr-uniform">
-												<div class="col-4">
-													<span class="image fit"><img src="../images/IslandSurvival/brownianmotion.png" alt="" /></span>
-													<p class="imginfo">Initial prototype terrain</p>
-												</div>
-												<div class="col-4">
-													<span class="image fit"><img src="../images/IslandSurvival/terraces 6.png" alt="" /></span>
-													<p class="imginfo">Fully refined terrain</p>
-												</div>
-												<div class="col-4">
-													<span class="image fit"><img src="../images/IslandSurvival/island.png" alt="" /></span>
-													<p class="imginfo">Added ability to convert terrain into islands</p>
-												</div>
-												<div class="col-4">
-													<span class="image fit"><img src="../images/IslandSurvival/basic biomes 17028.png" alt="" /></span>
-													<p class="imginfo">Initial biome generation</p>
-												</div>
-												<div class="col-4">
-													<span class="image fit"><img src="../images/IslandSurvival/island based biomes.png" alt="" /></span>
-													<p class="imginfo">Refined biomes to work based off of the islands themselves</p>
-												</div>
-												<div class="col-4">
-													<span class="image fit"><img src="../images/IslandSurvival/final island and plants.png" alt="" /></span>
-													<p class="imginfo">Full terrain with refined biomes and meshes</p>
-												</div>
+									<p>Made as a third-year project with the overall goal of strengthening our ability to properly plan and 
+										document the full development process, largely through the use of User Stories and Trello. One unique 
+										challenge was in the navigation and movement of the ants as they were required to align themselves 
+										correctly to terrain of any angle. Due to this a custom navigation system, using <b>A* Pathfinding</b> and a 
+										<b>3D grid</b> overlayed over the terrain, along with <b>custom collision avoidance</b> using raycasts was developed.</p>
+										<p>As well as this, the ants have a few core states they can be in at any one time:</p>
+										<ul>
+											<li><b>Normal Movement:</b> Follow a pre-set path around the map</li>
+											<li><b>Investigation:</b> Seen player and moving towards for the attack, calling for backup occasionally</li>
+											<li><b>Attack:</b> When very close to the player, initiate the attack sequence</li>
+											<li><b>Received Damage:</b> At times, either play the damage animation or flee for a brief period</li>
+										</ul>
+										<p>Below are the 5 different ant AI's</p>
+										<div class="row gtr-uniform" style="margin-top: 2em;">
+											<div class="col-3">
+												<span class="image fit"><img src="../images/Antipede/FarmerAnt.PNG" alt="" /></span>
+												<p class="imginfo">Neumerous and sometimes carry larvae</p>
 											</div>
-									</section>				
+											
+											<div class="col-3">
+												<span class="image fit"><img src="../images/Antipede/DasherAnt.PNG" alt="" /></span>
+												<p class="imginfo">Small and fast, but low health</p>
+											</div>
+											<div class="col-3">
+												<span class="image fit"><img src="../images/Antipede/GuardAnt.PNG" alt="" /></span>
+												<p class="imginfo">Strong and hits hard, high health</p>
+											</div>
+											<div class="col-3">
+												<span class="image fit"><img src="../images/Antipede/BombAnt.PNG" alt="" /></span>
+												<p class="imginfo">Hits really hard, attaching to the player and exploding</p>
+											</div>	
+											<div class="col-3">
+												<span class="image fit"><img src="../images/Antipede/HunterAnt.PNG" alt="" /></span>
+												<p class="imginfo">Uses weapons to fire at the player from a range</p>
+											</div>
+										</div>
+
+									<h3 class="major">This project will be shown at UTS during the 2022 autumn Tech Festival</h3>	
 								</div>
 							</div>
 						</div>
