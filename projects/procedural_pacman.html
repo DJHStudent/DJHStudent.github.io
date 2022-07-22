@@ -49,10 +49,10 @@
 								<span id="overview-text" style="background-color: #2C3557;">C#</span>
 								<span id="overview-text" style="background-color: #4C5C96;">AI</span>
 								<span id="overview-text" style="background-color: #4C5C96;">Randomized Mazes</span>
-								<span id="overview-text" style="background-color: #748CE3;">Group of 5</span>
+								<span id="overview-text" style="background-color: #748CE3;">Individual</span>
 									<div style="margin: auto; margin-top: 4em; display: flex; width: 70%;">
-										<a href="#" class="special">View code on Github</a>
-										<a href="#" class="special" style="margin-left: 2em;">Play in browser from itch.io</a>
+										<a href="https://github.com/DJHStudent/PacMan_Game" target="_blank" class="special">View code on Github</a>
+										<a href="https://davidh18.itch.io/large-scale-procedural-pacman" target="_blank" class="special" style="margin-left: 2em;">Play in browser from itch.io</a>
 									</div>	
 								<!-- <p>Collect fuel and evade zombies in this LAN multiplayer, random island generation tech demo.</p> -->
 							</div>
@@ -64,7 +64,7 @@
 								<div class="inner">
 									<div style="display: inline-block; margin-bottom: 2em;">								
 										<video controls>
-												<source src="../Videos/PacmanGame.mp4" type="video/mp4">
+												<source src="../Videos/PacmanGameV2.mp4" type="video/mp4">
 											</video>
 										<h3 class="major">Features to Highlight</h3>
 										<ul>
@@ -77,32 +77,32 @@
 									</div>
 									<p>Made as a first-year project with the goal of making a recreation of the game Pac-Man within your 
 										own unique style. Due to the special constraints of the Pac-Man maze design, the generator contained 
-										some unique challenges, such as all inside walls needing to be at least 2 thick. As well as this the use 
+										some unique challenges, such as <u><b>all inside walls needing to be at least 2 thick.</b></u> As well as this the use 
 										of different assets based on whether the tile bordered the edge of the map or a path further complicated
 										development.</p>
 										<div class="row gtr-uniform" style="margin-top: 2em;">
 											<div class="col-3">
-												<span class="image fit"><img src="../images/Pacman/BlueSheep.gif" alt="" /></span>
+												<span class="image fit"><img src="../images/Pacman/BlueSheep.gif" alt="Blue Sheep Enemy" /></span>
 												<p class="imginfo">Moves away from player</p>
 											</div>
 											
 											<div class="col-3">
-												<span class="image fit"><img src="../images/Pacman/OrangeSheep.gif" alt="" /></span>
+												<span class="image fit"><img src="../images/Pacman/OrangeSheep.gif" alt="Orange Sheep Enemy" /></span>
 												<p class="imginfo">Moves towards player</p>
 											</div>
 											<div class="col-3">
-												<span class="image fit"><img src="../images/Pacman/PinkSheep.gif" alt="" /></span>
+												<span class="image fit"><img src="../images/Pacman/PinkSheep.gif" alt="Pink Sheep Enemy" /></span>
 												<p class="imginfo">Moves in random directions</p>
 											</div>
 											<div class="col-3">
-												<span class="image fit"><img src="../images/Pacman/RedSheep.gif" alt="" /></span>
+												<span class="image fit"><img src="../images/Pacman/RedSheep.gif" alt="Red Sheep Enemy" /></span>
 												<p class="imginfo">Follows map border in clockwise direction</p>
 											</div>
 										</div>
 										<p>Within the sheep AI one main challenge, especially on larger maps, was creating an efficient 
 											and accurate navigation system that would be more precise than just choosing the direction 
 											to move at each intersection.  
-											<b>A* pathfinding</b> was implemented to solve this, having the condition that it would only calculate a path
+											<u><b>A* pathfinding</b></u> was implemented to solve this, having the condition that it would only calculate a path
 											up to 40 tiles away, instead of right to the goal, in order to get optimal 
 											performance with reliable accuracy.</p>
 
