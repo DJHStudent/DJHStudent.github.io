@@ -4230,3 +4230,8 @@ input, select, textarea {
 		min-height: 100%;
 		z-index: -1;
 	}
+
+	.projectOverviews{
+		display: inline-block;
+		margin-bottom: 2em;
+	}

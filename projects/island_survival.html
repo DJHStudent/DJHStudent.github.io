@@ -64,8 +64,10 @@
 						<div id="about">
 							<div class="wrapper">
 								<div class="inner">
-									<div>
-										<span class="image right" height="1em"><img src="../images/IslandSurvival/TerrainPanorama.gif" alt="" /></span>									
+									<div class = "projectOverviews">
+										<video controls>
+											<source src="../Videos/IslandSurvivalVideo.mp4" type="video/mp4">
+										</video>
 										<h3 class="major">Things I Implemented</h3>
 										<ul>
 											<li>Entire seeded procedural terrain system, including biomes and object spawning</li>
@@ -87,19 +89,19 @@
 												</div>
 												<div class="col-4">
 													<span class="image fit"><img src="../images/IslandSurvival/BiomeMap.JPG" alt="List of biome blueprints" /></span>
-													<p class="imginfo">The list of biome blueprints to use during generation</p>
+													<p class="imginfo">The list of biome blueprints to use during terrain generation</p>
 												</div>
 												<div class="col-4">
 													<span class="image fit"><img src="../images/IslandSurvival/BiomeBlueprint.JPG" alt="Single Biome Blueprint Settings" /></span>
-													<p class="imginfo">The specific settings avaliable for each biome blueprint</p>
+													<p class="imginfo">The specific settings available for each biome blueprint</p>
 												</div>
 											</div>
 									</section>	
 									
 									<p>
-										Through the use of various equations, all centred around <u><b>perlin noise</b></u> the height of each vertex of the 
-										<u><b>base plane mesh</b></u> gets offset on the y axis based on some underlying values set in the editor. Then through
-										the use of <u><b>voronoi noise</b></u> each island and water body has biomes and meshes overlayed over the specified vertices,
+										Through the use of various equations, all centred around <u><b>Perlin noise</b></u> the height of each vertex of the 
+										<u><b>base plane mesh</b></u> gets offset on the y axis based on some underlying values set in the editor. Then,
+										using <u><b>Voronoi noise,</b></u> each island and water body has biomes and meshes overlayed over the specified vertices,
 										along with some further height offsets to give more uniqueness to each biome.
 									</p>
 												
@@ -135,7 +137,7 @@
 												</div>
 												<div class="col-4">
 													<span class="image fit"><img src="../images/IslandSurvival/island based biomes.png" alt="" /></span>
-													<p class="imginfo">Refined biomes to work based off of the islands themselves</p>
+													<p class="imginfo">Refined biomes to work based off the islands themselves</p>
 												</div>
 												<div class="col-4">
 													<span class="image fit"><img src="../images/IslandSurvival/final island and plants.png" alt="" /></span>
