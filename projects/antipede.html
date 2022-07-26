@@ -49,7 +49,7 @@
 								<h2>Antipede</h2>
 								<span id="overview-text" style="background-color: #1F263D;">Unity Engine</span>
 								<span id="overview-text" style="background-color: #2C3557;">C#</span>
-								<span id="overview-text" style="background-color: #4C5C96;">AI</span>
+								<span id="overview-text" style="background-color: #4C5C96;">Combined Finite State Machine and Behaviour Tree AI</span>
 								<span id="overview-text" style="background-color: #4C5C96;">Stylized Main Menu</span>
 								<span id="overview-text" style="background-color: #748CE3;">Group of 5</span>
 									<div style="margin: auto; margin-top: 4em; display: flex; width: 70%;">
@@ -64,10 +64,10 @@
 						<div id="about">
 							<div class="wrapper">
 								<div class="inner">
-									<div style="display: inline-block; margin-bottom: 2em;">								
-										<!-- <video controls> -->
-												<!-- <source src="../Videos/PacmanGame.mp4" type="video/mp4"> -->
-											<!-- </video> -->
+									<div class = "projectOverviews">
+										<video controls>
+											<source src="../Videos/AntipedeGamePlay.mp4" type="video/mp4">
+										</video>
 										<h3 style="color: red;">Project Currently Under Active Development</h3>
 	
 										<h3 class="major">Things I Implemented/Currently Developing</h3>
@@ -79,43 +79,55 @@
 										</ul>
 									</div>
 									<p>Made as a third-year project with the overall goal of strengthening our ability to properly plan and 
-										document the full development process, largely through the use of User Stories and Trello. One unique 
-										challenge was in the navigation and movement of the ants as they were required to align themselves 
-										correctly to terrain of any angle. Due to this a custom navigation system, using <b>A* Pathfinding</b> and a 
-										<b>3D grid</b> overlayed over the terrain, along with <b>custom collision avoidance</b> using raycasts was developed.</p>
-										<p>As well as this, the ants have a few core states they can be in at any one time:</p>
-										<ul>
-											<li><b>Normal Movement:</b> Follow a pre-set path around the map</li>
-											<li><b>Investigation:</b> Seen player and moving towards for the attack, calling for backup occasionally</li>
-											<li><b>Attack:</b> When very close to the player, initiate the attack sequence</li>
-											<li><b>Received Damage:</b> At times, either play the damage animation or flee for a brief period</li>
-										</ul>
-										<p>Below are the 5 different ant AI's</p>
+										document the full development process, through the use of core agile principles such as User Stories and Trello.</p>
+									<p>
+										In order to properly and easily facilitate the implementation of the ants AI, a combined <u><b>Finite State Machine</b></u>
+										and <u><b>Behavour Tree</b></u> architecture was developed. The overarching core componets of the AI were split up into their
+										own seperate state machine states to allow for easy transitioning between any state at any time. Within the states themselves
+										the behaviour tree structrue was used to facilitate the easy mapping out of the ordered sequence of events that occur.
+									</p>
+
+									<p>
+										One unique challenge was in the navigation and movement of the ants as they were required to align themselves 
+										correctly to terrain of any angle. Due to this a custom navigation system, using <u><b>A* Pathfinding</b></u> and a 
+										<u><b>3D grid</b></u> overlayed over the terrain, along with <u><b>custom collision avoidance</b></u> using raycasts was developed.</p>
+										
+										<h3 class="major">The 5 Ant Types</h3>
 										<div class="row gtr-uniform" style="margin-top: 2em;">
 											<div class="col-3">
-												<span class="image fit"><img src="../images/Antipede/FarmerAnt.PNG" alt="" /></span>
+												<span class="image fit"><img src="../images/Antipede/FarmerAnt.gif" alt="" /></span>
 												<p class="imginfo">Neumerous and sometimes carry larvae</p>
 											</div>
 											
 											<div class="col-3">
-												<span class="image fit"><img src="../images/Antipede/DasherAnt.PNG" alt="" /></span>
+												<span class="image fit"><img src="../images/Antipede/DasherAnt.gif" alt="" /></span>
 												<p class="imginfo">Small and fast, but low health</p>
 											</div>
 											<div class="col-3">
-												<span class="image fit"><img src="../images/Antipede/GuardAnt.PNG" alt="" /></span>
+												<span class="image fit"><img src="../images/Antipede/GuardAnt.gif" alt="" /></span>
 												<p class="imginfo">Strong and hits hard, high health</p>
 											</div>
 											<div class="col-3">
-												<span class="image fit"><img src="../images/Antipede/BombAnt.PNG" alt="" /></span>
+												<span class="image fit"><img src="../images/Antipede/BombAnt.gif" alt="" /></span>
 												<p class="imginfo">Hits really hard, attaching to the player and exploding</p>
 											</div>	
 											<div class="col-3">
-												<span class="image fit"><img src="../images/Antipede/HunterAnt.PNG" alt="" /></span>
+												<span class="image fit"><img src="../images/Antipede/HunterAnt.gif" alt="" /></span>
 												<p class="imginfo">Uses weapons to fire at the player from a range</p>
 											</div>
 										</div>
+										<p>These ants have a few core states they can be in at any one time:</p>
+										<ul>
+											<li><b>Normal:</b> Follow a pre-set path around the map</li>
+											<li><b>Shock:</b> Expresse shock at detecting the player</li>
+											<li><b>Investigation:</b> Seen player and moving towards for the attack, calling for backup occasionally</li>
+											<li><b>Attack:</b> When very close to the player, initiate the attack sequence</li>
+											<li><b>Damage:</b> At times, either play the damage animation or flee for a brief period</li>
+											<li><b>Dead:</b> When run out of health, play the die animation</li>
+										</ul>
+										
 
-									<h3 class="major">This project will be shown at UTS during the 2022 autumn Tech Festival</h3>	
+									<h3 class="major">This project was selected for and shown at UTS during the 2022 autumn Tech Festival</h3>	
 								</div>
 							</div>
 						</div>

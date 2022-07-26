@@ -2188,7 +2188,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: rgba(255, 255, 255, 0.025);
+		background: rgba(127, 127, 127, .75);
 		border-radius: 5px;
 		border: none;
 		border: solid 2px rgba(255, 255, 255, 0.125);
