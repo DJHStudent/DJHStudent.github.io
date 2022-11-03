@@ -72,16 +72,37 @@
 										<p style="color: red;">!!! This project is under active development and will update over time !!!</p>
 										<h3 class="major">Things I Worked On</h3>
 										<ul>
-											<li>Support for muliple controllers</li>
+											<li>Support for multiple controllers</li>
 											<li>Scene transition shader</li>
 											<li>The car character and bug fixing the others</li>
-											<li>Per level section checkpoint system</li>
+											<li>Per stage section checkpoint system</li>
 											<li>Majority of the puzzle designs and implementation</li>
 											<li>The tutorial stage</li>
-											<li>Implementing automated code quality analyzers</li>
+											<li>Implementing automated code quality analysers</li>
 											<li>Implementing an event system architecture</li>
 										</ul>
-									</div>									
+									</div>
+									<p>Made as a third-year project with the overall goal of refining and further developing
+										our understanding of a games full development process, through the use of the <b>project management software, Jira</b>
+										and close collaborations with others from the sound and music department.</p>
+									<p>
+										To facilitate the communication between the various classes used, two <b>C# event systems</b> were setup, one for handling game events,
+										such as players death, and another for UI events such as button clicks and scene transitions. This was done to further streamline development
+										by reducing the need to assign components within the Unity inspector, enabling certain functions such as player respawning to be simpler to handle.
+										Further to this, a number of editor tools were developed a script to generate cube walls of any size and another to generate an 
+										<b>A* Pathfinding</b> over a <b>3D grid</b> between the buttons/ switches and the object they interact with.
+									</p>
+
+									<p>     One challenging system was with the development of the per checkpoint save system as all dynamic objects within the stage needed a way to be properly saved and reset when a
+										player died. This was achieved by using an overlapping box over each section of the stage so that each item with the <b>saveable interface</b> could be 
+										collected and stored. Along with this each of these items was given a <b>unique integer Id</b> which was able to check and update itself whenever a new
+										saveable item was added or removed from the <b>editors hierarchy</b>. A key issue here was in ensuring that once an Id was set for an item it would not
+										change as this could break the save system if two different items were given the same Id. This was solved by generating an error message
+										if the system detected that two items ended up with the same Id, enabling me to manually change the appropriate one so that the saving would not be broken.
+										As well as this a <b>dictionary of dictionaries</b> was used to hold all this data, where each stage had its own dictionary, storing all the data for <b>each 
+										section</b> as its own element within it, and this all being stored in an outer dictionary which held the data for each stage as its elements.
+									</p>
+										
 
 								</div>
 							</div>
