@@ -16,7 +16,7 @@
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
-				<video autoplay muted loop src="../Videos/PortfolioBackgroundVid.mp4" id="bckVideo"  type="video/mp4"></video>
+				<video autoplay playsinline muted loop src="../Videos/PortfolioBackgroundVid.mp4" id="bckVideo" class="lazy" type="video/mp4"></video>
 
 				<!-- Header -->
 				<header id="header">
@@ -65,7 +65,7 @@
 							<div class="wrapper">
 								<div class="inner">
 									<div class = "projectOverviews">
-										<video controls>
+										<video controls preload="metadata" poster="../images/Antipede/VideoImage.JPG">
 											<source src="../Videos/AntipedeGamePlay.mp4" type="video/mp4">
 										</video>	
 										<h3 class="major">Things I Worked On</h3>
