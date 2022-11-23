@@ -4190,7 +4190,7 @@ input, select, textarea {
 		display: inline-block;
 	}
 /*images*/
-.imginfo{
+.imginfo, .imginforain{
 	text-align: center;
 	margin-top: -2em;
 	margin-bottom: -2em;
