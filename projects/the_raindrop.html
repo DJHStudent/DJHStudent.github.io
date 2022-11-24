@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>The Raindrop</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+				<video autoplay muted loop playsinline src="../Videos/PortfolioBackgroundVid.mp4" id="bckVideo" class="lazy" type="video/mp4"></video>
+
+				<!-- Header -->
+				<header id="header">
+					<h1><a href="../index.html">David Hestelow</a></h1>
+					<nav>
+						<a id="header-button"href="../index.html#one">About Me</a>
+						<a id="header-button" href="../index.html#four">Student Projects</a>
+						<a id="header-button" href="#footer">Contact</a>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+						<!-- Menu -->
+						<nav id="menu">
+							<div class="inner">
+								<h2>Menu</h2>
+								<ul class="links">
+									<li><a id="header-button"href="../index.html#one">About Me</a></li>
+									<li><a id="header-button" href="../index.html#four">Student Projects</a></li>
+									<a id="header-button" href="#footer">Contact</a>
+								</ul>
+								<a href="#" class="close">Close</a>
+							</div>
+						</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>The Raindrop</h2>
+								<span id="overview-text" style="background-color: #1F263D;">Unity Engine</span>
+								<span id="overview-text" style="background-color: #2C3557;">C#</span>
+								<span id="overview-text" style="background-color: #4C5C96;">Player Controller</span>
+								<span id="overview-text" style="background-color: #4C5C96;">Randomized Levels</span>
+								<span id="overview-text" style="background-color: #748CE3;">Group of 5</span>
+									<div style="margin: auto; margin-top: 4em; display: flex; width: 70%;">
+										<a href="https://github.com/DJHStudent/WaterCycleGame2021" target="_blank" class="special">View code on Github</a>
+										<a href="https://davidh18.itch.io/the-raindrop" target="_blank" class="special" style="margin-left: 2em;">Play in browser from itch.io</a>
+									</div>	
+							</div>
+						</header>
+
+						<!-- Content -->
+						<div id="about">
+							<div class="wrapper">
+								<div class="inner">
+									<div class="projectOverviews" style="width: 100%;">								
+								<iframe height = "250px" src="https://www.youtube.com/embed/7kQYIgihIgQ?rel=0" title="The Raindrop game trailer"
+								allowfullscreen>
+								</iframe>	
+										<h3 class="major">Things I worked on</h3>
+										<ul>
+
+											<li>Player controller</li>
+											<li>All Random level generation</li>
+											<li>All menus and UI elements</li>
+											<li>Complete Saving and Loading of Players Scores</li>
+											<li>Wind and blackhole systems</li>
+										</ul>
+									</div>
+									<p>Created as a second-year project, this sees the player, the sun, fall in love with a raindrop, 
+										gain its trust and guide it up through various stages from the lake, all the way up to space. 
+										Being made with the two themes <b><em>the life of a raindrop</em></b> and <b><em>trust and betrayal</em></b> at its core the aim 
+										was to make an enjoyable game which followed good design principles. As the <b>main programmer</b> I 
+										endeavoured to ensure that the elements developed were highly modular and easy to use across all 
+										the various levels of the game.</p>
+
+
+											<h3 class="major">Random Level Generator</h3>
+											<p>
+												A main challenge with the generator was ensuring that players do not get overwhellmed to early on
+												and as well not too easy as to require no movement whatsoever.
+												To solve this a <b>shuffle list style system</b> where the components of the level got broken up
+												into various stages based on difficulty and only spawned in based on the players progression and 
+												the stage that came before it. Within this it was ensured that no falling elements, such as leaves,
+												could appear in a similar place multiple times in a row as well as the gaps never appearing 
+												too far appart or close together.
+											</p>
+											<p>Below is an overview of the level generator and its parameters for level 1:</p>
+											<div class="row gtr-uniform" >
+												<div class="col-4">
+													<span class="image fit"><img src="../images/Raindrop/leveleasy.gif" alt="" /></span>
+													<p class="imginforain">Easiest sections, with fewest leaves and branches farthest appart.
+														Appears randomly, at level start and after the hardcore section
+													</p>
+												</div>
+												<div class="col-4">
+													<span class="image fit"><img src="../images/Raindrop/levelmedium.gif" alt="" /></span>
+													<p class="imginforain">Medium difficutly sections, branches closer together and some more leaves.
+														Appears randomly
+													</p>
+												</div>
+												<div class="col-4">
+													<span class="image fit"><img src="../images/Raindrop/levelhard.gif" alt="" /></span>
+													<p class="imginforain">Hard sections, with branches quite close together and many leaves spawning.
+														Appears randomly
+													</p>
+												</div>
+												<div class="col-4">
+													<span class="image fit"><img src="../images/Raindrop/levelhardcore.gif" alt="" /></span>
+													<p class="imginforain">Hardcore, the hardest section, containing only many leaves needing to be dodged.
+														Appears randomly and is least common
+													</p>
+												</div>
+												<div class="col-4">
+													<span class="image fit"><img src="../images/Raindrop/levelgenstats.PNG" alt="" /></span>
+													<p class="imginfo">Snapshot of the level generator's editor</p>
+												</div>
+											</div>
+
+											<h3 class="major" style="margin-top: 50px;">Player Controller</h3>
+											<p>
+												The goal here was to develope a system in which the player, controlling the sunbeam, 
+												would be able to guide the raindrop around the various obsticals throughout the levels. 
+												A core challenge here was in getting the movement to feel nice and intuitive requiring a variety of user 
+												testing and refinement as seen below:
+											</p>
+											<div class="row gtr-uniform">
+												<div class="col-4">
+													<span class="image fit"><img src="../images/Raindrop/Movement Prototype.gif" alt="" /></span>
+													<p class="imginforain">Early prototype: Sunbeam moves across the screen and the raindrop will only 
+														move when a certain distance from it
+													</p>
+												</div>
+												<div class="col-4">
+													<span class="image fit"><img src="../images/Raindrop/Final Movement.gif" alt="" /></span>
+													<p class="imginforain">Final Version: Sunbeam rotates instead of moving 
+														and the raindrop constantly moving towards it with no limit on how far it can get
+													</p>
+												</div>
+											</div>
+									</section>	
+								</div>
+							</div>
+						</div>
+
+					</section>
+
+				<!-- Footer style="display: inline !important;"style="margin-left: 2em; display: inline !important;"-->
+				<section id="footer" style="background-color: rgba(46, 49, 65, 0.7); margin-top: -120px;">
+					<div class="inner" style="margin-top: 120px;">
+						<h2 class="major">Get in touch</h2>
+						<!-- <p></p>
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="4"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form> -->
+						<ul class="contact">
+							<li class="icon solid fa-phone">(+61) 0419260344</li>
+							<li class="icon solid fa-envelope"><a href="mailto:djhestelow@gmail.com">djhestelow@gmail.com</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://au.linkedin.com/in/david-hestelow-804aa7239">LinkedIn</a></li>
+							<li class="icon brands fa-twitter"><a href="https://twitter.com/DJHestelow">Twitter</a></li>
+							<!-- <li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+							<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+							<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li> -->
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

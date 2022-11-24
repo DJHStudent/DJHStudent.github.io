@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Antipede</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+				<video autoplay playsinline muted loop src="../Videos/PortfolioBackgroundVid.mp4" id="bckVideo" class="lazy" type="video/mp4"></video>
+
+				<!-- Header -->
+				<header id="header">
+					<h1><a href="../SubSite/home.html">David Hestelow</a></h1>
+					<nav>
+						<a id="header-button"href="../SubSite/home.html#one">About Me</a>
+						<a id="header-button" href="../SubSite/home.html#four">Student Projects</a>
+						<a id="header-button" href="#footer">Contact</a>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+						<!-- Menu -->
+						<nav id="menu">
+							<div class="inner">
+								<h2>Menu</h2>
+								<ul class="links">
+									<li><a id="header-button"href="../SubSite/home.html#one">About Me</a></li>
+									<li><a id="header-button" href="../SubSite/home.html#four">Student Projects</a></li>
+									<a id="header-button" href="#footer">Contact</a>
+								</ul>
+								<a href="#" class="close">Close</a>
+							</div>
+						</nav>
+			
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Antipede</h2>
+								<span id="overview-text" style="background-color: #1F263D;">Unity Engine</span>
+								<span id="overview-text" style="background-color: #2C3557;">C#</span>
+								<span id="overview-text" style="background-color: #4C5C96;">Combined Finite State Machine and Behaviour Tree AI</span>
+								<span id="overview-text" style="background-color: #4C5C96;">Stylized Main Menu</span>
+								<span id="overview-text" style="background-color: #748CE3;">Group of 5</span>
+									<div style="margin: auto; margin-top: 4em; display: flex; width: 70%;">
+										<a href="https://github.com/MaxGottardi/Antipede" target="_blank" class="special">View code on Github</a>
+										<a href="https://daveyd24.itch.io/antipede-sprint1" target="_blank" class="special" style="margin-left: 2em;">Download and play from itch.io</a>
+									</div>	
+								<!-- <p>Collect fuel and evade zombies in this LAN multiplayer, random island generation tech demo.</p> -->
+							</div>
+						</header>
+
+						<!-- Content -->
+						<div id="about">
+							<div class="wrapper">
+								<div class="inner">
+									<div class = "projectOverviews">
+										<video controls preload="metadata" poster="../images/Antipede/VideoImage.JPG">
+											<source src="../Videos/AntipedeGamePlay.mp4" type="video/mp4">
+										</video>	
+										<h3 class="major">Things I Worked On</h3>
+										<ul>
+											<li>All Ant AI and Models</li>
+											<li>Main Menu Design and Functionality</li>
+											<li>All Accessibility Options</li>
+											<li>Complete Saving and Loading of the Game</li>
+										</ul>
+									</div>
+									<p>Made as a third-year project with the overall goal of strengthening our ability to properly plan and 
+										document the full development process, through the use of core agile principles such as User Stories and Trello.</p>
+									<p>
+										In order to properly and easily facilitate the implementation of the ants AI, a combined <b>Finite State Machine</b>
+										and <b>Behavour Tree</b> architecture was developed. The overarching core componets of the AI were split up into their
+										own seperate state machine states to allow for easy transitioning between any state at any time. Within the states themselves
+										the behaviour tree structrue was used to facilitate the easy mapping out of the ordered sequence of events that occur.
+									</p>
+
+									<p>
+										One unique challenge was in the navigation and movement of the ants as they were required to align themselves 
+										correctly to terrain of any angle. Due to this a custom navigation system, using <b>A* Pathfinding</b> and a 
+										<b>3D grid</b> overlayed over the terrain, along with <b>custom collision avoidance</b> using raycasts was developed.</p>
+										
+										<h3 class="major">The 5 Ant Types</h3>
+										<div class="row gtr-uniform" style="margin-top: 2em;">
+											<div class="col-3">
+												<span class="image fit"><video class="img" autoplay playsinline muted loop
+													src="../images/Antipede/FarmerAnt.mp4"></video></span>
+												<p class="imginfo">Neumerous and sometimes carry larvae</p>
+											</div>
+											
+											<div class="col-3">
+												<span class="image fit"><video class="img" autoplay playsinline muted loop
+													src="../images/Antipede/DasherAnt.mp4"></video></span>
+												<p class="imginfo">Small and fast, but low health</p>
+											</div>
+											<div class="col-3">
+												<span class="image fit"><video class="img" autoplay playsinline muted loop
+													src="../images/Antipede/GuardAnt.mp4"></video></span>
+												<p class="imginfo">Strong and hits hard, high health</p>
+											</div>
+											<div class="col-3">
+												<span class="image fit"><video class="img" autoplay playsinline muted loop
+													src="../images/Antipede/BombAnt.mp4"></video></span>
+												<p class="imginfo">Hits really hard, attaching to the player and exploding</p>
+											</div>	
+											<div class="col-3">
+												<span class="image fit"><video class="img" autoplay playsinline muted loop
+													src="../images/Antipede/hunterant.mp4"></video></span>
+												<p class="imginfo">Uses weapons to fire at the player from a range</p>
+											</div>
+										</div>
+										<p>These ants have a few core states they can be in at any one time:</p>
+										<ul>
+											<li><b>Normal:</b> Follow a pre-set path around the map</li>
+											<li><b>Shock:</b> Expresse shock at detecting the player</li>
+											<li><b>Investigation:</b> Seen player and moving towards for the attack, calling for backup occasionally</li>
+											<li><b>Attack:</b> When very close to the player, initiate the attack sequence</li>
+											<li><b>Damage:</b> At times, either play the damage animation or flee for a brief period</li>
+											<li><b>Dead:</b> When run out of health, play the die animation</li>
+										</ul>
+										
+
+									<h3 class="major">This project was selected for and shown at UTS during the 2022 autumn Tech Festival</h3>	
+								</div>
+							</div>
+						</div>
+
+					</section>
+
+				<!-- Footer style="display: inline !important;"style="margin-left: 2em; display: inline !important;"-->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<!-- <p></p>
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="4"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form> -->
+						<ul class="contact">
+							<li class="icon solid fa-phone">(+61) 0419260344</li>
+							<li class="icon solid fa-envelope"><a href="mailto:djhestelow@gmail.com">djhestelow@gmail.com</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://au.linkedin.com/in/david-hestelow-804aa7239">LinkedIn</a></li>
+							<li class="icon brands fa-twitter"><a href="https://twitter.com/DJHestelow">Twitter</a></li>
+								<!-- <li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+							<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+							<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li> -->
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

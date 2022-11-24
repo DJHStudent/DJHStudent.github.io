@@ -16,7 +16,7 @@
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
-				<video autoplay muted loop src="../Videos/PortfolioBackgroundVid.mp4" id="bckVideo"  type="video/mp4"></video>
+				<video autoplay muted playsinline loop src="../Videos/PortfolioBackgroundVid.mp4" id="bckVideo" class="lazy" type="video/mp4"></video>
 
 				<!-- Header -->
 				<header id="header">
@@ -64,7 +64,7 @@
 							<div class="wrapper">
 								<div class="inner">
 									<div class="projectOverviews">								
-										<video controls>
+										<video controls preload="metadata" poster="../images/Pacman/VideoBackground.JPG">
 												<source src="../Videos/PacmanGameV2.mp4" type="video/mp4">
 											</video>
 										<h3 class="major">Features to Highlight</h3>
@@ -82,6 +82,7 @@
 										some unique challenges, such as <b>all inside walls needing to be at least 2 thick.</b> As well as this the use 
 										of different assets based on whether the tile bordered the edge of the map or a path further complicated
 										development.</p>
+		
 										<div class="row gtr-uniform" style="margin-top: 2em;">
 											<div class="col-3">
 												<span class="image fit"><img src="../images/Pacman/BlueSheep.gif" alt="Blue Sheep Enemy" /></span>
@@ -111,9 +112,8 @@
 									<h3 class="major">This project was specially selected for and shown at UTS during</h3>
 									<a href="https://showcase.gamesstudio.org/spring-2020/" target="_blank"
 									 class="image"><img src="../images/Pacman/2020 Showcase.PNG" 
-											alt="Island Survival Banner Image" width="50%"/></a>	
-											
-										<section style="margin-top: 4em;">
+											alt="Island Survival Banner Image" width="50%"/></a>
+									<section style="margin-top: 4em;">
 											<h3 class="major">Evolutuion of the maze generator</h3>
 											<div class="row gtr-uniform">
 												<div class="col-4">
